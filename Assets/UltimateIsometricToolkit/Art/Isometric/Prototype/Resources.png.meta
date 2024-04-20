@@ -1,0 +1,4627 @@
+fileFormatVersion: 2
+guid: 4d33d63bb1839d74aa660dc8069d8335
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: blockHuge_E
+  - first:
+      213: 21300002
+    second: blockHuge_N
+  - first:
+      213: 21300004
+    second: blockHuge_S
+  - first:
+      213: 21300006
+    second: blockHuge_W
+  - first:
+      213: 21300008
+    second: blockHugeCornerInner_E
+  - first:
+      213: 21300010
+    second: blockHugeCornerInner_N
+  - first:
+      213: 21300012
+    second: blockHugeCornerInner_S
+  - first:
+      213: 21300014
+    second: blockHugeCornerInner_W
+  - first:
+      213: 21300016
+    second: blockHugeCornerOuter_E
+  - first:
+      213: 21300018
+    second: blockHugeCornerOuter_N
+  - first:
+      213: 21300020
+    second: blockHugeCornerOuter_S
+  - first:
+      213: 21300022
+    second: blockHugeCornerOuter_W
+  - first:
+      213: 21300024
+    second: blockHugeSlant_E
+  - first:
+      213: 21300026
+    second: blockHugeSlant_N
+  - first:
+      213: 21300028
+    second: blockHugeSlant_S
+  - first:
+      213: 21300030
+    second: blockHugeSlant_W
+  - first:
+      213: 21300032
+    second: blockLarge_E
+  - first:
+      213: 21300034
+    second: blockLarge_N
+  - first:
+      213: 21300036
+    second: blockLarge_S
+  - first:
+      213: 21300038
+    second: blockLarge_W
+  - first:
+      213: 21300040
+    second: blockLargeSlant_E
+  - first:
+      213: 21300042
+    second: blockLargeSlant_N
+  - first:
+      213: 21300044
+    second: blockLargeSlant_S
+  - first:
+      213: 21300046
+    second: blockLargeSlant_W
+  - first:
+      213: 21300048
+    second: blockSmall_E
+  - first:
+      213: 21300050
+    second: blockSmall_N
+  - first:
+      213: 21300052
+    second: blockSmall_S
+  - first:
+      213: 21300054
+    second: blockSmall_W
+  - first:
+      213: 21300056
+    second: button_E
+  - first:
+      213: 21300058
+    second: button_N
+  - first:
+      213: 21300060
+    second: button_S
+  - first:
+      213: 21300062
+    second: button_W
+  - first:
+      213: 21300064
+    second: buttonPressed_E
+  - first:
+      213: 21300066
+    second: buttonPressed_N
+  - first:
+      213: 21300068
+    second: buttonPressed_S
+  - first:
+      213: 21300070
+    second: buttonPressed_W
+  - first:
+      213: 21300072
+    second: column_E
+  - first:
+      213: 21300074
+    second: column_N
+  - first:
+      213: 21300076
+    second: column_S
+  - first:
+      213: 21300078
+    second: column_W
+  - first:
+      213: 21300080
+    second: columnBlocks_E
+  - first:
+      213: 21300082
+    second: columnBlocks_N
+  - first:
+      213: 21300084
+    second: columnBlocks_S
+  - first:
+      213: 21300086
+    second: columnBlocks_W
+  - first:
+      213: 21300088
+    second: columnCorner_E
+  - first:
+      213: 21300090
+    second: columnCorner_N
+  - first:
+      213: 21300092
+    second: columnCorner_S
+  - first:
+      213: 21300094
+    second: columnCorner_W
+  - first:
+      213: 21300096
+    second: floor_E
+  - first:
+      213: 21300098
+    second: floor_N
+  - first:
+      213: 21300100
+    second: floor_S
+  - first:
+      213: 21300102
+    second: floor_W
+  - first:
+      213: 21300104
+    second: floorGrass_E
+  - first:
+      213: 21300106
+    second: floorGrass_N
+  - first:
+      213: 21300108
+    second: floorGrass_S
+  - first:
+      213: 21300110
+    second: floorGrass_W
+  - first:
+      213: 21300112
+    second: floorGrassRound_E
+  - first:
+      213: 21300114
+    second: floorGrassRound_N
+  - first:
+      213: 21300116
+    second: floorGrassRound_S
+  - first:
+      213: 21300118
+    second: floorGrassRound_W
+  - first:
+      213: 21300120
+    second: floorHalf_E
+  - first:
+      213: 21300122
+    second: floorHalf_N
+  - first:
+      213: 21300124
+    second: floorHalf_S
+  - first:
+      213: 21300126
+    second: floorHalf_W
+  - first:
+      213: 21300128
+    second: floorQuarter_E
+  - first:
+      213: 21300130
+    second: floorQuarter_N
+  - first:
+      213: 21300132
+    second: floorQuarter_S
+  - first:
+      213: 21300134
+    second: floorQuarter_W
+  - first:
+      213: 21300136
+    second: ladder_E
+  - first:
+      213: 21300138
+    second: ladder_N
+  - first:
+      213: 21300140
+    second: ladder_S
+  - first:
+      213: 21300142
+    second: ladder_W
+  - first:
+      213: 21300144
+    second: slab_E
+  - first:
+      213: 21300146
+    second: slab_N
+  - first:
+      213: 21300148
+    second: slab_S
+  - first:
+      213: 21300150
+    second: slab_W
+  - first:
+      213: 21300152
+    second: slabHalf_E
+  - first:
+      213: 21300154
+    second: slabHalf_N
+  - first:
+      213: 21300156
+    second: slabHalf_S
+  - first:
+      213: 21300158
+    second: slabHalf_W
+  - first:
+      213: 21300160
+    second: slabQuarter_E
+  - first:
+      213: 21300162
+    second: slabQuarter_N
+  - first:
+      213: 21300164
+    second: slabQuarter_S
+  - first:
+      213: 21300166
+    second: slabQuarter_W
+  - first:
+      213: 21300168
+    second: stepsLarge_E
+  - first:
+      213: 21300170
+    second: stepsLarge_N
+  - first:
+      213: 21300172
+    second: stepsLarge_S
+  - first:
+      213: 21300174
+    second: stepsLarge_W
+  - first:
+      213: 21300176
+    second: stepsSmall_E
+  - first:
+      213: 21300178
+    second: stepsSmall_N
+  - first:
+      213: 21300180
+    second: stepsSmall_S
+  - first:
+      213: 21300182
+    second: stepsSmall_W
+  - first:
+      213: 21300184
+    second: stepsSmallCornerInner_E
+  - first:
+      213: 21300186
+    second: stepsSmallCornerInner_N
+  - first:
+      213: 21300188
+    second: stepsSmallCornerInner_S
+  - first:
+      213: 21300190
+    second: stepsSmallCornerInner_W
+  - first:
+      213: 21300192
+    second: stepsSmallCornerOuter_E
+  - first:
+      213: 21300194
+    second: stepsSmallCornerOuter_N
+  - first:
+      213: 21300196
+    second: stepsSmallCornerOuter_S
+  - first:
+      213: 21300198
+    second: stepsSmallCornerOuter_W
+  - first:
+      213: 21300200
+    second: stepsSmallSlabs_E
+  - first:
+      213: 21300202
+    second: stepsSmallSlabs_N
+  - first:
+      213: 21300204
+    second: stepsSmallSlabs_S
+  - first:
+      213: 21300206
+    second: stepsSmallSlabs_W
+  - first:
+      213: 21300208
+    second: stepsSmallSlabsCornerInner_E
+  - first:
+      213: 21300210
+    second: stepsSmallSlabsCornerInner_N
+  - first:
+      213: 21300212
+    second: stepsSmallSlabsCornerInner_S
+  - first:
+      213: 21300214
+    second: stepsSmallSlabsCornerInner_W
+  - first:
+      213: 21300216
+    second: stepsSmallSlabsCornerOuter_E
+  - first:
+      213: 21300218
+    second: stepsSmallSlabsCornerOuter_N
+  - first:
+      213: 21300220
+    second: stepsSmallSlabsCornerOuter_S
+  - first:
+      213: 21300222
+    second: stepsSmallSlabsCornerOuter_W
+  - first:
+      213: 21300224
+    second: wallCorner_E
+  - first:
+      213: 21300226
+    second: wallCorner_N
+  - first:
+      213: 21300228
+    second: wallCorner_S
+  - first:
+      213: 21300230
+    second: wallCorner_W
+  - first:
+      213: 21300232
+    second: wallDoorClosed_E
+  - first:
+      213: 21300234
+    second: wallDoorClosed_N
+  - first:
+      213: 21300236
+    second: wallDoorClosed_S
+  - first:
+      213: 21300238
+    second: wallDoorClosed_W
+  - first:
+      213: 21300240
+    second: wallDoorOpen_E
+  - first:
+      213: 21300242
+    second: wallDoorOpen_N
+  - first:
+      213: 21300244
+    second: wallDoorOpen_S
+  - first:
+      213: 21300246
+    second: wallDoorOpen_W
+  - first:
+      213: 21300248
+    second: wallDoorway_E
+  - first:
+      213: 21300250
+    second: wallDoorway_N
+  - first:
+      213: 21300252
+    second: wallDoorway_S
+  - first:
+      213: 21300254
+    second: wallDoorway_W
+  - first:
+      213: 21300256
+    second: wallDoorwayLeft_E
+  - first:
+      213: 21300258
+    second: wallDoorwayLeft_N
+  - first:
+      213: 21300260
+    second: wallDoorwayLeft_S
+  - first:
+      213: 21300262
+    second: wallDoorwayLeft_W
+  - first:
+      213: 21300264
+    second: wallDoorwayMiddle_E
+  - first:
+      213: 21300266
+    second: wallDoorwayMiddle_N
+  - first:
+      213: 21300268
+    second: wallDoorwayMiddle_S
+  - first:
+      213: 21300270
+    second: wallDoorwayMiddle_W
+  - first:
+      213: 21300272
+    second: wallDoorwayRight_E
+  - first:
+      213: 21300274
+    second: wallDoorwayRight_N
+  - first:
+      213: 21300276
+    second: wallDoorwayRight_S
+  - first:
+      213: 21300278
+    second: wallDoorwayRight_W
+  - first:
+      213: 21300280
+    second: wallHalfCastle_E
+  - first:
+      213: 21300282
+    second: wallHalfCastle_N
+  - first:
+      213: 21300284
+    second: wallHalfCastle_S
+  - first:
+      213: 21300286
+    second: wallHalfCastle_W
+  - first:
+      213: 21300288
+    second: wallHalfCorner_E
+  - first:
+      213: 21300290
+    second: wallHalfCorner_N
+  - first:
+      213: 21300292
+    second: wallHalfCorner_S
+  - first:
+      213: 21300294
+    second: wallHalfCorner_W
+  - first:
+      213: 21300296
+    second: wallHalfStraight_E
+  - first:
+      213: 21300298
+    second: wallHalfStraight_N
+  - first:
+      213: 21300300
+    second: wallHalfStraight_S
+  - first:
+      213: 21300302
+    second: wallHalfStraight_W
+  - first:
+      213: 21300304
+    second: wallStraight_E
+  - first:
+      213: 21300306
+    second: wallStraight_N
+  - first:
+      213: 21300308
+    second: wallStraight_S
+  - first:
+      213: 21300310
+    second: wallStraight_W
+  - first:
+      213: 21300312
+    second: wallSwitchOff_E
+  - first:
+      213: 21300314
+    second: wallSwitchOff_N
+  - first:
+      213: 21300316
+    second: wallSwitchOff_S
+  - first:
+      213: 21300318
+    second: wallSwitchOff_W
+  - first:
+      213: 21300320
+    second: wallSwitchOn_E
+  - first:
+      213: 21300322
+    second: wallSwitchOn_N
+  - first:
+      213: 21300324
+    second: wallSwitchOn_S
+  - first:
+      213: 21300326
+    second: wallSwitchOn_W
+  - first:
+      213: 21300328
+    second: wallWindow_E
+  - first:
+      213: 21300330
+    second: wallWindow_N
+  - first:
+      213: 21300332
+    second: wallWindow_S
+  - first:
+      213: 21300334
+    second: wallWindow_W
+  - first:
+      213: 21300336
+    second: wallWindowLeft_E
+  - first:
+      213: 21300338
+    second: wallWindowLeft_N
+  - first:
+      213: 21300340
+    second: wallWindowLeft_S
+  - first:
+      213: 21300342
+    second: wallWindowLeft_W
+  - first:
+      213: 21300344
+    second: wallWindowMiddle_E
+  - first:
+      213: 21300346
+    second: wallWindowMiddle_N
+  - first:
+      213: 21300348
+    second: wallWindowMiddle_S
+  - first:
+      213: 21300350
+    second: wallWindowMiddle_W
+  - first:
+      213: 21300352
+    second: wallWindowRight_E
+  - first:
+      213: 21300354
+    second: wallWindowRight_N
+  - first:
+      213: 21300356
+    second: wallWindowRight_S
+  - first:
+      213: 21300358
+    second: wallWindowRight_W
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 16
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 180
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blockHuge_E
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1736
+        width: 256
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockHuge_N
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1423
+        width: 256
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockHuge_S
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1110
+        width: 256
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockHuge_W
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 797
+        width: 256
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockHugeCornerInner_E
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1419
+        width: 256
+        height: 308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockHugeCornerInner_N
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 164
+        width: 256
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockHugeCornerInner_S
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 1315
+        width: 256
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockHugeCornerInner_W
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1105
+        width: 256
+        height: 308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockHugeCornerOuter_E
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 5
+        width: 256
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockHugeCornerOuter_N
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1733
+        width: 256
+        height: 310
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockHugeCornerOuter_S
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 7
+        width: 256
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockHugeCornerOuter_W
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 55
+        width: 256
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockHugeSlant_E
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 1812
+        width: 256
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockHugeSlant_N
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 791
+        width: 256
+        height: 308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockHugeSlant_S
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 550
+        width: 256
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockHugeSlant_W
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 477
+        width: 256
+        height: 308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockLarge_E
+      rect:
+        serializedVersion: 2
+        x: 3092
+        y: 973
+        width: 155
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockLarge_N
+      rect:
+        serializedVersion: 2
+        x: 2786
+        y: 1539
+        width: 155
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockLarge_S
+      rect:
+        serializedVersion: 2
+        x: 2832
+        y: 1721
+        width: 155
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockLarge_W
+      rect:
+        serializedVersion: 2
+        x: 2860
+        y: 316
+        width: 155
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockLargeSlant_E
+      rect:
+        serializedVersion: 2
+        x: 3522
+        y: 1923
+        width: 139
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockLargeSlant_N
+      rect:
+        serializedVersion: 2
+        x: 2947
+        y: 1557
+        width: 147
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockLargeSlant_S
+      rect:
+        serializedVersion: 2
+        x: 3090
+        y: 811
+        width: 160
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockLargeSlant_W
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 646
+        width: 163
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockSmall_E
+      rect:
+        serializedVersion: 2
+        x: 2947
+        y: 1466
+        width: 95
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockSmall_N
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 1466
+        width: 95
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockSmall_S
+      rect:
+        serializedVersion: 2
+        x: 3961
+        y: 1870
+        width: 92
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45305410000000000800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blockSmall_W
+      rect:
+        serializedVersion: 2
+        x: 3961
+        y: 1958
+        width: 95
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65305410000000000800000000000000
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_E
+      rect:
+        serializedVersion: 2
+        x: 3253
+        y: 1086
+        width: 152
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85305410000000000800000000000000
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_N
+      rect:
+        serializedVersion: 2
+        x: 3253
+        y: 993
+        width: 152
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5305410000000000800000000000000
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_S
+      rect:
+        serializedVersion: 2
+        x: 3409
+        y: 1251
+        width: 152
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5305410000000000800000000000000
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_W
+      rect:
+        serializedVersion: 2
+        x: 3455
+        y: 1380
+        width: 152
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5305410000000000800000000000000
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttonPressed_E
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 808
+        width: 152
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06305410000000000800000000000000
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttonPressed_N
+      rect:
+        serializedVersion: 2
+        x: 2726
+        y: 808
+        width: 152
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26305410000000000800000000000000
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttonPressed_S
+      rect:
+        serializedVersion: 2
+        x: 3803
+        y: 1956
+        width: 152
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46305410000000000800000000000000
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttonPressed_W
+      rect:
+        serializedVersion: 2
+        x: 3846
+        y: 1777
+        width: 152
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66305410000000000800000000000000
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: column_E
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 552
+        width: 69
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86305410000000000800000000000000
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: column_N
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 345
+        width: 69
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6305410000000000800000000000000
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: column_S
+      rect:
+        serializedVersion: 2
+        x: 1708
+        y: 345
+        width: 69
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6305410000000000800000000000000
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: column_W
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 345
+        width: 69
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6305410000000000800000000000000
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: columnBlocks_E
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 1369
+        width: 70
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07305410000000000800000000000000
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: columnBlocks_N
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 1369
+        width: 70
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27305410000000000800000000000000
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: columnBlocks_S
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 911
+        width: 70
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47305410000000000800000000000000
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: columnBlocks_W
+      rect:
+        serializedVersion: 2
+        x: 1951
+        y: 911
+        width: 70
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67305410000000000800000000000000
+      internalID: 21300086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: columnCorner_E
+      rect:
+        serializedVersion: 2
+        x: 2236
+        y: 1612
+        width: 66
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87305410000000000800000000000000
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: columnCorner_N
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 809
+        width: 69
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7305410000000000800000000000000
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: columnCorner_S
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 1412
+        width: 69
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7305410000000000800000000000000
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: columnCorner_W
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 968
+        width: 65
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7305410000000000800000000000000
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_E
+      rect:
+        serializedVersion: 2
+        x: 2830
+        y: 937
+        width: 256
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08305410000000000800000000000000
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_N
+      rect:
+        serializedVersion: 2
+        x: 2726
+        y: 1301
+        width: 256
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28305410000000000800000000000000
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_S
+      rect:
+        serializedVersion: 2
+        x: 2941
+        y: 1137
+        width: 256
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48305410000000000800000000000000
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_W
+      rect:
+        serializedVersion: 2
+        x: 2776
+        y: 480
+        width: 256
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68305410000000000800000000000000
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorGrass_E
+      rect:
+        serializedVersion: 2
+        x: 2756
+        y: 1885
+        width: 256
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88305410000000000800000000000000
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorGrass_N
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 901
+        width: 256
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8305410000000000800000000000000
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorGrass_S
+      rect:
+        serializedVersion: 2
+        x: 2693
+        y: 644
+        width: 256
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8305410000000000800000000000000
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorGrass_W
+      rect:
+        serializedVersion: 2
+        x: 2679
+        y: 1101
+        width: 256
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8305410000000000800000000000000
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorGrassRound_E
+      rect:
+        serializedVersion: 2
+        x: 2417
+        y: 1065
+        width: 256
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09305410000000000800000000000000
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorGrassRound_N
+      rect:
+        serializedVersion: 2
+        x: 2464
+        y: 1265
+        width: 256
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29305410000000000800000000000000
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorGrassRound_S
+      rect:
+        serializedVersion: 2
+        x: 2524
+        y: 1465
+        width: 256
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49305410000000000800000000000000
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorGrassRound_W
+      rect:
+        serializedVersion: 2
+        x: 2570
+        y: 1703
+        width: 256
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69305410000000000800000000000000
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorHalf_E
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 1344
+        width: 199
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89305410000000000800000000000000
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorHalf_N
+      rect:
+        serializedVersion: 2
+        x: 1990
+        y: 20
+        width: 201
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9305410000000000800000000000000
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorHalf_S
+      rect:
+        serializedVersion: 2
+        x: 2884
+        y: 810
+        width: 200
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9305410000000000800000000000000
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorHalf_W
+      rect:
+        serializedVersion: 2
+        x: 3203
+        y: 1179
+        width: 200
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9305410000000000800000000000000
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorQuarter_E
+      rect:
+        serializedVersion: 2
+        x: 3763
+        y: 1600
+        width: 135
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a305410000000000800000000000000
+      internalID: 21300128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorQuarter_N
+      rect:
+        serializedVersion: 2
+        x: 3763
+        y: 1689
+        width: 148
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a305410000000000800000000000000
+      internalID: 21300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorQuarter_S
+      rect:
+        serializedVersion: 2
+        x: 3917
+        y: 1688
+        width: 140
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a305410000000000800000000000000
+      internalID: 21300132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorQuarter_W
+      rect:
+        serializedVersion: 2
+        x: 3570
+        y: 1545
+        width: 133
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a305410000000000800000000000000
+      internalID: 21300134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ladder_E
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 356
+        width: 52
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a305410000000000800000000000000
+      internalID: 21300136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ladder_N
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 969
+        width: 51
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa305410000000000800000000000000
+      internalID: 21300138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ladder_S
+      rect:
+        serializedVersion: 2
+        x: 1881
+        y: 163
+        width: 52
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca305410000000000800000000000000
+      internalID: 21300140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ladder_W
+      rect:
+        serializedVersion: 2
+        x: 1822
+        y: 148
+        width: 53
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea305410000000000800000000000000
+      internalID: 21300142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slab_E
+      rect:
+        serializedVersion: 2
+        x: 2137
+        y: 786
+        width: 256
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b305410000000000800000000000000
+      internalID: 21300144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slab_N
+      rect:
+        serializedVersion: 2
+        x: 2155
+        y: 985
+        width: 256
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b305410000000000800000000000000
+      internalID: 21300146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slab_S
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 1229
+        width: 256
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b305410000000000800000000000000
+      internalID: 21300148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slab_W
+      rect:
+        serializedVersion: 2
+        x: 2262
+        y: 1429
+        width: 256
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b305410000000000800000000000000
+      internalID: 21300150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slabHalf_E
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 1597
+        width: 195
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b305410000000000800000000000000
+      internalID: 21300152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slabHalf_N
+      rect:
+        serializedVersion: 2
+        x: 2197
+        y: 9
+        width: 214
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab305410000000000800000000000000
+      internalID: 21300154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slabHalf_S
+      rect:
+        serializedVersion: 2
+        x: 3100
+        y: 1577
+        width: 194
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb305410000000000800000000000000
+      internalID: 21300156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slabHalf_W
+      rect:
+        serializedVersion: 2
+        x: 3162
+        y: 1741
+        width: 194
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb305410000000000800000000000000
+      internalID: 21300158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slabQuarter_E
+      rect:
+        serializedVersion: 2
+        x: 3667
+        y: 1942
+        width: 130
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c305410000000000800000000000000
+      internalID: 21300160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slabQuarter_N
+      rect:
+        serializedVersion: 2
+        x: 3149
+        y: 1469
+        width: 153
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c305410000000000800000000000000
+      internalID: 21300162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slabQuarter_S
+      rect:
+        serializedVersion: 2
+        x: 3530
+        y: 1816
+        width: 175
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c305410000000000800000000000000
+      internalID: 21300164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slabQuarter_W
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 1835
+        width: 129
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c305410000000000800000000000000
+      internalID: 21300166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsLarge_E
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 422
+        width: 195
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c305410000000000800000000000000
+      internalID: 21300168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsLarge_N
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 1113
+        width: 194
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac305410000000000800000000000000
+      internalID: 21300170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsLarge_S
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 602
+        width: 194
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc305410000000000800000000000000
+      internalID: 21300172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsLarge_W
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 1168
+        width: 194
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec305410000000000800000000000000
+      internalID: 21300174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmall_E
+      rect:
+        serializedVersion: 2
+        x: 2463
+        y: 241
+        width: 256
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d305410000000000800000000000000
+      internalID: 21300176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmall_N
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 33
+        width: 256
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d305410000000000800000000000000
+      internalID: 21300178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmall_S
+      rect:
+        serializedVersion: 2
+        x: 2263
+        y: 604
+        width: 256
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d305410000000000800000000000000
+      internalID: 21300180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmall_W
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1809
+        width: 256
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d305410000000000800000000000000
+      internalID: 21300182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallCornerInner_E
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 272
+        width: 256
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d305410000000000800000000000000
+      internalID: 21300184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallCornerInner_N
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 530
+        width: 256
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad305410000000000800000000000000
+      internalID: 21300186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallCornerInner_S
+      rect:
+        serializedVersion: 2
+        x: 2494
+        y: 1867
+        width: 256
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd305410000000000800000000000000
+      internalID: 21300188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallCornerInner_W
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 8
+        width: 256
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed305410000000000800000000000000
+      internalID: 21300190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallCornerOuter_E
+      rect:
+        serializedVersion: 2
+        x: 2417
+        y: 57
+        width: 256
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e305410000000000800000000000000
+      internalID: 21300192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallCornerOuter_N
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 1553
+        width: 256
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e305410000000000800000000000000
+      internalID: 21300194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallCornerOuter_S
+      rect:
+        serializedVersion: 2
+        x: 2308
+        y: 1629
+        width: 256
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e305410000000000800000000000000
+      internalID: 21300196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallCornerOuter_W
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 233
+        width: 256
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e305410000000000800000000000000
+      internalID: 21300198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallSlabs_E
+      rect:
+        serializedVersion: 2
+        x: 3501
+        y: 1638
+        width: 256
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e305410000000000800000000000000
+      internalID: 21300200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallSlabs_N
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 786
+        width: 256
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae305410000000000800000000000000
+      internalID: 21300202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallSlabs_S
+      rect:
+        serializedVersion: 2
+        x: 3308
+        y: 1473
+        width: 256
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce305410000000000800000000000000
+      internalID: 21300204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallSlabs_W
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 1043
+        width: 256
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee305410000000000800000000000000
+      internalID: 21300206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallSlabsCornerInner_E
+      rect:
+        serializedVersion: 2
+        x: 2679
+        y: 61
+        width: 256
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f305410000000000800000000000000
+      internalID: 21300208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallSlabsCornerInner_N
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 1571
+        width: 256
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f305410000000000800000000000000
+      internalID: 21300210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallSlabsCornerInner_S
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 786
+        width: 256
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f305410000000000800000000000000
+      internalID: 21300212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallSlabsCornerInner_W
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 420
+        width: 256
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f305410000000000800000000000000
+      internalID: 21300214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallSlabsCornerOuter_E
+      rect:
+        serializedVersion: 2
+        x: 2725
+        y: 261
+        width: 129
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f305410000000000800000000000000
+      internalID: 21300216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallSlabsCornerOuter_N
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 1304
+        width: 256
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af305410000000000800000000000000
+      internalID: 21300218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallSlabsCornerOuter_S
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 488
+        width: 256
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf305410000000000800000000000000
+      internalID: 21300220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stepsSmallSlabsCornerOuter_W
+      rect:
+        serializedVersion: 2
+        x: 2641
+        y: 440
+        width: 129
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef305410000000000800000000000000
+      internalID: 21300222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallCorner_E
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 484
+        width: 163
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00405410000000000800000000000000
+      internalID: 21300224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallCorner_N
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 1793
+        width: 256
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20405410000000000800000000000000
+      internalID: 21300226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallCorner_S
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 242
+        width: 256
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40405410000000000800000000000000
+      internalID: 21300228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallCorner_W
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 171
+        width: 162
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60405410000000000800000000000000
+      internalID: 21300230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorClosed_E
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 227
+        width: 163
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80405410000000000800000000000000
+      internalID: 21300232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorClosed_N
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 1017
+        width: 163
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0405410000000000800000000000000
+      internalID: 21300234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorClosed_S
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 535
+        width: 162
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0405410000000000800000000000000
+      internalID: 21300236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorClosed_W
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 1789
+        width: 162
+        height: 254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0405410000000000800000000000000
+      internalID: 21300238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorOpen_E
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 1282
+        width: 163
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01405410000000000800000000000000
+      internalID: 21300240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorOpen_N
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 1274
+        width: 195
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21405410000000000800000000000000
+      internalID: 21300242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorOpen_S
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 1279
+        width: 194
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41405410000000000800000000000000
+      internalID: 21300244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorOpen_W
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 202
+        width: 162
+        height: 276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61405410000000000800000000000000
+      internalID: 21300246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorway_E
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 1793
+        width: 163
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81405410000000000800000000000000
+      internalID: 21300248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorway_N
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 760
+        width: 163
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1405410000000000800000000000000
+      internalID: 21300250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorway_S
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 1534
+        width: 162
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1405410000000000800000000000000
+      internalID: 21300252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorway_W
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 1281
+        width: 162
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1405410000000000800000000000000
+      internalID: 21300254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorwayLeft_E
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 1612
+        width: 164
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02405410000000000800000000000000
+      internalID: 21300256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorwayLeft_N
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 21
+        width: 163
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22405410000000000800000000000000
+      internalID: 21300258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorwayLeft_S
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1017
+        width: 162
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42405410000000000800000000000000
+      internalID: 21300260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorwayLeft_W
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 767
+        width: 162
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62405410000000000800000000000000
+      internalID: 21300262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorwayMiddle_E
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 15
+        width: 164
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82405410000000000800000000000000
+      internalID: 21300264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorwayMiddle_N
+      rect:
+        serializedVersion: 2
+        x: 3362
+        y: 1760
+        width: 162
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2405410000000000800000000000000
+      internalID: 21300266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorwayMiddle_S
+      rect:
+        serializedVersion: 2
+        x: 3186
+        y: 1904
+        width: 162
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2405410000000000800000000000000
+      internalID: 21300268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorwayMiddle_W
+      rect:
+        serializedVersion: 2
+        x: 3354
+        y: 1904
+        width: 162
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2405410000000000800000000000000
+      internalID: 21300270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorwayRight_E
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 1537
+        width: 164
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03405410000000000800000000000000
+      internalID: 21300272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorwayRight_N
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 1025
+        width: 162
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23405410000000000800000000000000
+      internalID: 21300274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorwayRight_S
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 1370
+        width: 162
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43405410000000000800000000000000
+      internalID: 21300276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallDoorwayRight_W
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 838
+        width: 162
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63405410000000000800000000000000
+      internalID: 21300278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallHalfCastle_E
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1722
+        width: 163
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83405410000000000800000000000000
+      internalID: 21300280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallHalfCastle_N
+      rect:
+        serializedVersion: 2
+        x: 3018
+        y: 1886
+        width: 162
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3405410000000000800000000000000
+      internalID: 21300282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallHalfCastle_S
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 10
+        width: 162
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3405410000000000800000000000000
+      internalID: 21300284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallHalfCastle_W
+      rect:
+        serializedVersion: 2
+        x: 1822
+        y: 6
+        width: 162
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3405410000000000800000000000000
+      internalID: 21300286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallHalfCorner_E
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 1811
+        width: 163
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04405410000000000800000000000000
+      internalID: 21300288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallHalfCorner_N
+      rect:
+        serializedVersion: 2
+        x: 2201
+        y: 238
+        width: 256
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24405410000000000800000000000000
+      internalID: 21300290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallHalfCorner_S
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 415
+        width: 256
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44405410000000000800000000000000
+      internalID: 21300292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallHalfCorner_W
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 291
+        width: 162
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64405410000000000800000000000000
+      internalID: 21300294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallHalfStraight_E
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 803
+        width: 163
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84405410000000000800000000000000
+      internalID: 21300296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallHalfStraight_N
+      rect:
+        serializedVersion: 2
+        x: 2325
+        y: 1866
+        width: 163
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4405410000000000800000000000000
+      internalID: 21300298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallHalfStraight_S
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 600
+        width: 162
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4405410000000000800000000000000
+      internalID: 21300300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallHalfStraight_W
+      rect:
+        serializedVersion: 2
+        x: 2525
+        y: 621
+        width: 162
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4405410000000000800000000000000
+      internalID: 21300302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallStraight_E
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 504
+        width: 163
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05405410000000000800000000000000
+      internalID: 21300304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallStraight_N
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1792
+        width: 162
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25405410000000000800000000000000
+      internalID: 21300306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallStraight_S
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 1791
+        width: 162
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45405410000000000800000000000000
+      internalID: 21300308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallStraight_W
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 1537
+        width: 162
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65405410000000000800000000000000
+      internalID: 21300310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallSwitchOff_E
+      rect:
+        serializedVersion: 2
+        x: 3846
+        y: 1870
+        width: 52
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85405410000000000800000000000000
+      internalID: 21300312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallSwitchOff_N
+      rect:
+        serializedVersion: 2
+        x: 2174
+        y: 154
+        width: 51
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5405410000000000800000000000000
+      internalID: 21300314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallSwitchOff_S
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 162
+        width: 58
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5405410000000000800000000000000
+      internalID: 21300316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallSwitchOff_W
+      rect:
+        serializedVersion: 2
+        x: 2055
+        y: 150
+        width: 52
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5405410000000000800000000000000
+      internalID: 21300318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallSwitchOn_E
+      rect:
+        serializedVersion: 2
+        x: 1999
+        y: 148
+        width: 50
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06405410000000000800000000000000
+      internalID: 21300320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallSwitchOn_N
+      rect:
+        serializedVersion: 2
+        x: 2113
+        y: 152
+        width: 55
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26405410000000000800000000000000
+      internalID: 21300322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallSwitchOn_S
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 1043
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46405410000000000800000000000000
+      internalID: 21300324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallSwitchOn_W
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 148
+        width: 54
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66405410000000000800000000000000
+      internalID: 21300326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallWindow_E
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 248
+        width: 163
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86405410000000000800000000000000
+      internalID: 21300328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallWindow_N
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1535
+        width: 162
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6405410000000000800000000000000
+      internalID: 21300330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallWindow_S
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 499
+        width: 162
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6405410000000000800000000000000
+      internalID: 21300332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallWindow_W
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 1025
+        width: 162
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6405410000000000800000000000000
+      internalID: 21300334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallWindowLeft_E
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 1023
+        width: 164
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07405410000000000800000000000000
+      internalID: 21300336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallWindowLeft_N
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 503
+        width: 162
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27405410000000000800000000000000
+      internalID: 21300338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallWindowLeft_S
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 1273
+        width: 162
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47405410000000000800000000000000
+      internalID: 21300340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallWindowLeft_W
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 1793
+        width: 162
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67405410000000000800000000000000
+      internalID: 21300342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallWindowMiddle_E
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1281
+        width: 164
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87405410000000000800000000000000
+      internalID: 21300344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallWindowMiddle_N
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 760
+        width: 162
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7405410000000000800000000000000
+      internalID: 21300346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallWindowMiddle_S
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 1015
+        width: 162
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7405410000000000800000000000000
+      internalID: 21300348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallWindowMiddle_W
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 511
+        width: 162
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7405410000000000800000000000000
+      internalID: 21300350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallWindowRight_E
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 1537
+        width: 164
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08405410000000000800000000000000
+      internalID: 21300352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallWindowRight_N
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 1531
+        width: 163
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28405410000000000800000000000000
+      internalID: 21300354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallWindowRight_S
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 757
+        width: 162
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48405410000000000800000000000000
+      internalID: 21300356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallWindowRight_W
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 769
+        width: 162
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68405410000000000800000000000000
+      internalID: 21300358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      blockHugeCornerInner_E: 21300008
+      blockHugeCornerInner_N: 21300010
+      blockHugeCornerInner_S: 21300012
+      blockHugeCornerInner_W: 21300014
+      blockHugeCornerOuter_E: 21300016
+      blockHugeCornerOuter_N: 21300018
+      blockHugeCornerOuter_S: 21300020
+      blockHugeCornerOuter_W: 21300022
+      blockHugeSlant_E: 21300024
+      blockHugeSlant_N: 21300026
+      blockHugeSlant_S: 21300028
+      blockHugeSlant_W: 21300030
+      blockHuge_E: 21300000
+      blockHuge_N: 21300002
+      blockHuge_S: 21300004
+      blockHuge_W: 21300006
+      blockLargeSlant_E: 21300040
+      blockLargeSlant_N: 21300042
+      blockLargeSlant_S: 21300044
+      blockLargeSlant_W: 21300046
+      blockLarge_E: 21300032
+      blockLarge_N: 21300034
+      blockLarge_S: 21300036
+      blockLarge_W: 21300038
+      blockSmall_E: 21300048
+      blockSmall_N: 21300050
+      blockSmall_S: 21300052
+      blockSmall_W: 21300054
+      buttonPressed_E: 21300064
+      buttonPressed_N: 21300066
+      buttonPressed_S: 21300068
+      buttonPressed_W: 21300070
+      button_E: 21300056
+      button_N: 21300058
+      button_S: 21300060
+      button_W: 21300062
+      columnBlocks_E: 21300080
+      columnBlocks_N: 21300082
+      columnBlocks_S: 21300084
+      columnBlocks_W: 21300086
+      columnCorner_E: 21300088
+      columnCorner_N: 21300090
+      columnCorner_S: 21300092
+      columnCorner_W: 21300094
+      column_E: 21300072
+      column_N: 21300074
+      column_S: 21300076
+      column_W: 21300078
+      floorGrassRound_E: 21300112
+      floorGrassRound_N: 21300114
+      floorGrassRound_S: 21300116
+      floorGrassRound_W: 21300118
+      floorGrass_E: 21300104
+      floorGrass_N: 21300106
+      floorGrass_S: 21300108
+      floorGrass_W: 21300110
+      floorHalf_E: 21300120
+      floorHalf_N: 21300122
+      floorHalf_S: 21300124
+      floorHalf_W: 21300126
+      floorQuarter_E: 21300128
+      floorQuarter_N: 21300130
+      floorQuarter_S: 21300132
+      floorQuarter_W: 21300134
+      floor_E: 21300096
+      floor_N: 21300098
+      floor_S: 21300100
+      floor_W: 21300102
+      ladder_E: 21300136
+      ladder_N: 21300138
+      ladder_S: 21300140
+      ladder_W: 21300142
+      slabHalf_E: 21300152
+      slabHalf_N: 21300154
+      slabHalf_S: 21300156
+      slabHalf_W: 21300158
+      slabQuarter_E: 21300160
+      slabQuarter_N: 21300162
+      slabQuarter_S: 21300164
+      slabQuarter_W: 21300166
+      slab_E: 21300144
+      slab_N: 21300146
+      slab_S: 21300148
+      slab_W: 21300150
+      stepsLarge_E: 21300168
+      stepsLarge_N: 21300170
+      stepsLarge_S: 21300172
+      stepsLarge_W: 21300174
+      stepsSmallCornerInner_E: 21300184
+      stepsSmallCornerInner_N: 21300186
+      stepsSmallCornerInner_S: 21300188
+      stepsSmallCornerInner_W: 21300190
+      stepsSmallCornerOuter_E: 21300192
+      stepsSmallCornerOuter_N: 21300194
+      stepsSmallCornerOuter_S: 21300196
+      stepsSmallCornerOuter_W: 21300198
+      stepsSmallSlabsCornerInner_E: 21300208
+      stepsSmallSlabsCornerInner_N: 21300210
+      stepsSmallSlabsCornerInner_S: 21300212
+      stepsSmallSlabsCornerInner_W: 21300214
+      stepsSmallSlabsCornerOuter_E: 21300216
+      stepsSmallSlabsCornerOuter_N: 21300218
+      stepsSmallSlabsCornerOuter_S: 21300220
+      stepsSmallSlabsCornerOuter_W: 21300222
+      stepsSmallSlabs_E: 21300200
+      stepsSmallSlabs_N: 21300202
+      stepsSmallSlabs_S: 21300204
+      stepsSmallSlabs_W: 21300206
+      stepsSmall_E: 21300176
+      stepsSmall_N: 21300178
+      stepsSmall_S: 21300180
+      stepsSmall_W: 21300182
+      wallCorner_E: 21300224
+      wallCorner_N: 21300226
+      wallCorner_S: 21300228
+      wallCorner_W: 21300230
+      wallDoorClosed_E: 21300232
+      wallDoorClosed_N: 21300234
+      wallDoorClosed_S: 21300236
+      wallDoorClosed_W: 21300238
+      wallDoorOpen_E: 21300240
+      wallDoorOpen_N: 21300242
+      wallDoorOpen_S: 21300244
+      wallDoorOpen_W: 21300246
+      wallDoorwayLeft_E: 21300256
+      wallDoorwayLeft_N: 21300258
+      wallDoorwayLeft_S: 21300260
+      wallDoorwayLeft_W: 21300262
+      wallDoorwayMiddle_E: 21300264
+      wallDoorwayMiddle_N: 21300266
+      wallDoorwayMiddle_S: 21300268
+      wallDoorwayMiddle_W: 21300270
+      wallDoorwayRight_E: 21300272
+      wallDoorwayRight_N: 21300274
+      wallDoorwayRight_S: 21300276
+      wallDoorwayRight_W: 21300278
+      wallDoorway_E: 21300248
+      wallDoorway_N: 21300250
+      wallDoorway_S: 21300252
+      wallDoorway_W: 21300254
+      wallHalfCastle_E: 21300280
+      wallHalfCastle_N: 21300282
+      wallHalfCastle_S: 21300284
+      wallHalfCastle_W: 21300286
+      wallHalfCorner_E: 21300288
+      wallHalfCorner_N: 21300290
+      wallHalfCorner_S: 21300292
+      wallHalfCorner_W: 21300294
+      wallHalfStraight_E: 21300296
+      wallHalfStraight_N: 21300298
+      wallHalfStraight_S: 21300300
+      wallHalfStraight_W: 21300302
+      wallStraight_E: 21300304
+      wallStraight_N: 21300306
+      wallStraight_S: 21300308
+      wallStraight_W: 21300310
+      wallSwitchOff_E: 21300312
+      wallSwitchOff_N: 21300314
+      wallSwitchOff_S: 21300316
+      wallSwitchOff_W: 21300318
+      wallSwitchOn_E: 21300320
+      wallSwitchOn_N: 21300322
+      wallSwitchOn_S: 21300324
+      wallSwitchOn_W: 21300326
+      wallWindowLeft_E: 21300336
+      wallWindowLeft_N: 21300338
+      wallWindowLeft_S: 21300340
+      wallWindowLeft_W: 21300342
+      wallWindowMiddle_E: 21300344
+      wallWindowMiddle_N: 21300346
+      wallWindowMiddle_S: 21300348
+      wallWindowMiddle_W: 21300350
+      wallWindowRight_E: 21300352
+      wallWindowRight_N: 21300354
+      wallWindowRight_S: 21300356
+      wallWindowRight_W: 21300358
+      wallWindow_E: 21300328
+      wallWindow_N: 21300330
+      wallWindow_S: 21300332
+      wallWindow_W: 21300334
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,3907 @@
+fileFormatVersion: 2
+guid: 2ff73f8ec41810449a91b230f0a9216c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: abstractTile_01.png
+  - first:
+      213: 21300002
+    second: abstractTile_02.png
+  - first:
+      213: 21300004
+    second: abstractTile_03.png
+  - first:
+      213: 21300006
+    second: abstractTile_04.png
+  - first:
+      213: 21300008
+    second: abstractTile_05.png
+  - first:
+      213: 21300010
+    second: abstractTile_06.png
+  - first:
+      213: 21300012
+    second: abstractTile_07.png
+  - first:
+      213: 21300014
+    second: abstractTile_08.png
+  - first:
+      213: 21300016
+    second: abstractTile_09.png
+  - first:
+      213: 21300018
+    second: abstractTile_10.png
+  - first:
+      213: 21300020
+    second: abstractTile_11.png
+  - first:
+      213: 21300022
+    second: abstractTile_12.png
+  - first:
+      213: 21300024
+    second: abstractTile_13.png
+  - first:
+      213: 21300026
+    second: abstractTile_14.png
+  - first:
+      213: 21300028
+    second: abstractTile_15.png
+  - first:
+      213: 21300030
+    second: abstractTile_16.png
+  - first:
+      213: 21300032
+    second: abstractTile_17.png
+  - first:
+      213: 21300034
+    second: abstractTile_18.png
+  - first:
+      213: 21300036
+    second: abstractTile_19.png
+  - first:
+      213: 21300038
+    second: abstractTile_20.png
+  - first:
+      213: 21300040
+    second: abstractTile_21.png
+  - first:
+      213: 21300042
+    second: abstractTile_22.png
+  - first:
+      213: 21300044
+    second: abstractTile_23.png
+  - first:
+      213: 21300046
+    second: abstractTile_24.png
+  - first:
+      213: 21300048
+    second: abstractTile_25.png
+  - first:
+      213: 21300050
+    second: abstractTile_26.png
+  - first:
+      213: 21300052
+    second: abstractTile_27.png
+  - first:
+      213: 21300054
+    second: abstractTile_28.png
+  - first:
+      213: 21300056
+    second: abstractTile_29.png
+  - first:
+      213: 21300058
+    second: abstractTile_30.png
+  - first:
+      213: 21300060
+    second: abstractTile_31.png
+  - first:
+      213: 21300062
+    second: abstractTile_32.png
+  - first:
+      213: 21300064
+    second: platformerTile_01.png
+  - first:
+      213: 21300066
+    second: platformerTile_02.png
+  - first:
+      213: 21300068
+    second: platformerTile_03.png
+  - first:
+      213: 21300070
+    second: platformerTile_04.png
+  - first:
+      213: 21300072
+    second: platformerTile_05.png
+  - first:
+      213: 21300074
+    second: platformerTile_06.png
+  - first:
+      213: 21300076
+    second: platformerTile_07.png
+  - first:
+      213: 21300078
+    second: platformerTile_08.png
+  - first:
+      213: 21300080
+    second: platformerTile_09.png
+  - first:
+      213: 21300082
+    second: platformerTile_10.png
+  - first:
+      213: 21300084
+    second: platformerTile_11.png
+  - first:
+      213: 21300086
+    second: platformerTile_12.png
+  - first:
+      213: 21300088
+    second: platformerTile_13.png
+  - first:
+      213: 21300090
+    second: platformerTile_14.png
+  - first:
+      213: 21300092
+    second: platformerTile_15.png
+  - first:
+      213: 21300094
+    second: platformerTile_16.png
+  - first:
+      213: 21300096
+    second: platformerTile_17.png
+  - first:
+      213: 21300098
+    second: platformerTile_18.png
+  - first:
+      213: 21300100
+    second: platformerTile_19.png
+  - first:
+      213: 21300102
+    second: platformerTile_20.png
+  - first:
+      213: 21300104
+    second: platformerTile_21.png
+  - first:
+      213: 21300106
+    second: platformerTile_22.png
+  - first:
+      213: 21300108
+    second: platformerTile_23.png
+  - first:
+      213: 21300110
+    second: platformerTile_24.png
+  - first:
+      213: 21300112
+    second: platformerTile_25.png
+  - first:
+      213: 21300114
+    second: platformerTile_26.png
+  - first:
+      213: 21300116
+    second: platformerTile_27.png
+  - first:
+      213: 21300118
+    second: platformerTile_28.png
+  - first:
+      213: 21300120
+    second: platformerTile_29.png
+  - first:
+      213: 21300122
+    second: platformerTile_30.png
+  - first:
+      213: 21300124
+    second: platformerTile_31.png
+  - first:
+      213: 21300126
+    second: platformerTile_32.png
+  - first:
+      213: 21300128
+    second: platformerTile_33.png
+  - first:
+      213: 21300130
+    second: platformerTile_34.png
+  - first:
+      213: 21300132
+    second: platformerTile_35.png
+  - first:
+      213: 21300134
+    second: platformerTile_36.png
+  - first:
+      213: 21300136
+    second: platformerTile_37.png
+  - first:
+      213: 21300138
+    second: platformerTile_38.png
+  - first:
+      213: 21300140
+    second: platformerTile_39.png
+  - first:
+      213: 21300142
+    second: platformerTile_40.png
+  - first:
+      213: 21300144
+    second: platformerTile_41.png
+  - first:
+      213: 21300146
+    second: platformerTile_42.png
+  - first:
+      213: 21300148
+    second: platformerTile_43.png
+  - first:
+      213: 21300150
+    second: platformerTile_44.png
+  - first:
+      213: 21300152
+    second: platformerTile_45.png
+  - first:
+      213: 21300154
+    second: platformerTile_46.png
+  - first:
+      213: 21300156
+    second: platformerTile_47.png
+  - first:
+      213: 21300158
+    second: platformerTile_48.png
+  - first:
+      213: 21300160
+    second: voxelTile_01.png
+  - first:
+      213: 21300162
+    second: voxelTile_02.png
+  - first:
+      213: 21300164
+    second: voxelTile_03.png
+  - first:
+      213: 21300166
+    second: voxelTile_04.png
+  - first:
+      213: 21300168
+    second: voxelTile_05.png
+  - first:
+      213: 21300170
+    second: voxelTile_06.png
+  - first:
+      213: 21300172
+    second: voxelTile_07.png
+  - first:
+      213: 21300174
+    second: voxelTile_08.png
+  - first:
+      213: 21300176
+    second: voxelTile_09.png
+  - first:
+      213: 21300178
+    second: voxelTile_10.png
+  - first:
+      213: 21300180
+    second: voxelTile_11.png
+  - first:
+      213: 21300182
+    second: voxelTile_12.png
+  - first:
+      213: 21300184
+    second: voxelTile_13.png
+  - first:
+      213: 21300186
+    second: voxelTile_14.png
+  - first:
+      213: 21300188
+    second: voxelTile_15.png
+  - first:
+      213: 21300190
+    second: voxelTile_16.png
+  - first:
+      213: 21300192
+    second: voxelTile_17.png
+  - first:
+      213: 21300194
+    second: voxelTile_18.png
+  - first:
+      213: 21300196
+    second: voxelTile_19.png
+  - first:
+      213: 21300198
+    second: voxelTile_20.png
+  - first:
+      213: 21300200
+    second: voxelTile_21.png
+  - first:
+      213: 21300202
+    second: voxelTile_22.png
+  - first:
+      213: 21300204
+    second: voxelTile_23.png
+  - first:
+      213: 21300206
+    second: voxelTile_24.png
+  - first:
+      213: 21300208
+    second: voxelTile_25.png
+  - first:
+      213: 21300210
+    second: voxelTile_26.png
+  - first:
+      213: 21300212
+    second: voxelTile_27.png
+  - first:
+      213: 21300214
+    second: voxelTile_28.png
+  - first:
+      213: 21300216
+    second: voxelTile_29.png
+  - first:
+      213: 21300218
+    second: voxelTile_30.png
+  - first:
+      213: 21300220
+    second: voxelTile_31.png
+  - first:
+      213: 21300222
+    second: voxelTile_32.png
+  - first:
+      213: 21300224
+    second: voxelTile_33.png
+  - first:
+      213: 21300226
+    second: voxelTile_34.png
+  - first:
+      213: 21300228
+    second: voxelTile_35.png
+  - first:
+      213: 21300230
+    second: voxelTile_36.png
+  - first:
+      213: 21300232
+    second: voxelTile_37.png
+  - first:
+      213: 21300234
+    second: voxelTile_38.png
+  - first:
+      213: 21300236
+    second: voxelTile_39.png
+  - first:
+      213: 21300238
+    second: voxelTile_40.png
+  - first:
+      213: 21300240
+    second: voxelTile_41.png
+  - first:
+      213: 21300242
+    second: voxelTile_42.png
+  - first:
+      213: 21300244
+    second: voxelTile_43.png
+  - first:
+      213: 21300246
+    second: voxelTile_44.png
+  - first:
+      213: 21300248
+    second: voxelTile_45.png
+  - first:
+      213: 21300250
+    second: voxelTile_46.png
+  - first:
+      213: 21300252
+    second: voxelTile_47.png
+  - first:
+      213: 21300254
+    second: voxelTile_48.png
+  - first:
+      213: 21300256
+    second: voxelTile_49.png
+  - first:
+      213: 21300258
+    second: voxelTile_50.png
+  - first:
+      213: 21300260
+    second: voxelTile_51.png
+  - first:
+      213: 21300262
+    second: voxelTile_52.png
+  - first:
+      213: 21300264
+    second: voxelTile_53.png
+  - first:
+      213: 21300266
+    second: voxelTile_54.png
+  - first:
+      213: 21300268
+    second: voxelTile_55.png
+  - first:
+      213: 21300270
+    second: abstractTile_01
+  - first:
+      213: 21300272
+    second: abstractTile_02
+  - first:
+      213: 21300274
+    second: abstractTile_03
+  - first:
+      213: 21300276
+    second: abstractTile_04
+  - first:
+      213: 21300278
+    second: abstractTile_05
+  - first:
+      213: 21300280
+    second: abstractTile_06
+  - first:
+      213: 21300282
+    second: abstractTile_07
+  - first:
+      213: 21300284
+    second: abstractTile_08
+  - first:
+      213: 21300286
+    second: abstractTile_09
+  - first:
+      213: 21300288
+    second: abstractTile_10
+  - first:
+      213: 21300290
+    second: abstractTile_11
+  - first:
+      213: 21300292
+    second: abstractTile_12
+  - first:
+      213: 21300294
+    second: abstractTile_13
+  - first:
+      213: 21300296
+    second: abstractTile_14
+  - first:
+      213: 21300298
+    second: abstractTile_15
+  - first:
+      213: 21300300
+    second: abstractTile_16
+  - first:
+      213: 21300302
+    second: abstractTile_17
+  - first:
+      213: 21300304
+    second: abstractTile_18
+  - first:
+      213: 21300306
+    second: abstractTile_19
+  - first:
+      213: 21300308
+    second: abstractTile_20
+  - first:
+      213: 21300310
+    second: abstractTile_21
+  - first:
+      213: 21300312
+    second: abstractTile_22
+  - first:
+      213: 21300314
+    second: abstractTile_23
+  - first:
+      213: 21300316
+    second: abstractTile_24
+  - first:
+      213: 21300318
+    second: abstractTile_25
+  - first:
+      213: 21300320
+    second: abstractTile_26
+  - first:
+      213: 21300322
+    second: abstractTile_27
+  - first:
+      213: 21300324
+    second: abstractTile_28
+  - first:
+      213: 21300326
+    second: abstractTile_29
+  - first:
+      213: 21300328
+    second: abstractTile_30
+  - first:
+      213: 21300330
+    second: abstractTile_31
+  - first:
+      213: 21300332
+    second: abstractTile_32
+  - first:
+      213: 21300334
+    second: platformerTile_01
+  - first:
+      213: 21300336
+    second: platformerTile_02
+  - first:
+      213: 21300338
+    second: platformerTile_03
+  - first:
+      213: 21300340
+    second: platformerTile_04
+  - first:
+      213: 21300342
+    second: platformerTile_05
+  - first:
+      213: 21300344
+    second: platformerTile_06
+  - first:
+      213: 21300346
+    second: platformerTile_07
+  - first:
+      213: 21300348
+    second: platformerTile_08
+  - first:
+      213: 21300350
+    second: platformerTile_09
+  - first:
+      213: 21300352
+    second: platformerTile_10
+  - first:
+      213: 21300354
+    second: platformerTile_11
+  - first:
+      213: 21300356
+    second: platformerTile_12
+  - first:
+      213: 21300358
+    second: platformerTile_13
+  - first:
+      213: 21300360
+    second: platformerTile_14
+  - first:
+      213: 21300362
+    second: platformerTile_15
+  - first:
+      213: 21300364
+    second: platformerTile_16
+  - first:
+      213: 21300366
+    second: platformerTile_17
+  - first:
+      213: 21300368
+    second: platformerTile_18
+  - first:
+      213: 21300370
+    second: platformerTile_19
+  - first:
+      213: 21300372
+    second: platformerTile_20
+  - first:
+      213: 21300374
+    second: platformerTile_21
+  - first:
+      213: 21300376
+    second: platformerTile_22
+  - first:
+      213: 21300378
+    second: platformerTile_23
+  - first:
+      213: 21300380
+    second: platformerTile_24
+  - first:
+      213: 21300382
+    second: platformerTile_25
+  - first:
+      213: 21300384
+    second: platformerTile_26
+  - first:
+      213: 21300386
+    second: platformerTile_27
+  - first:
+      213: 21300388
+    second: platformerTile_28
+  - first:
+      213: 21300390
+    second: platformerTile_29
+  - first:
+      213: 21300392
+    second: platformerTile_30
+  - first:
+      213: 21300394
+    second: platformerTile_31
+  - first:
+      213: 21300396
+    second: platformerTile_32
+  - first:
+      213: 21300398
+    second: platformerTile_33
+  - first:
+      213: 21300400
+    second: platformerTile_34
+  - first:
+      213: 21300402
+    second: platformerTile_35
+  - first:
+      213: 21300404
+    second: platformerTile_36
+  - first:
+      213: 21300406
+    second: platformerTile_37
+  - first:
+      213: 21300408
+    second: platformerTile_38
+  - first:
+      213: 21300410
+    second: platformerTile_39
+  - first:
+      213: 21300412
+    second: platformerTile_40
+  - first:
+      213: 21300414
+    second: platformerTile_41
+  - first:
+      213: 21300416
+    second: platformerTile_42
+  - first:
+      213: 21300418
+    second: platformerTile_43
+  - first:
+      213: 21300420
+    second: platformerTile_44
+  - first:
+      213: 21300422
+    second: platformerTile_45
+  - first:
+      213: 21300424
+    second: platformerTile_46
+  - first:
+      213: 21300426
+    second: platformerTile_47
+  - first:
+      213: 21300428
+    second: platformerTile_48
+  - first:
+      213: 21300430
+    second: voxelTile_01
+  - first:
+      213: 21300432
+    second: voxelTile_02
+  - first:
+      213: 21300434
+    second: voxelTile_03
+  - first:
+      213: 21300436
+    second: voxelTile_04
+  - first:
+      213: 21300438
+    second: voxelTile_05
+  - first:
+      213: 21300440
+    second: voxelTile_06
+  - first:
+      213: 21300442
+    second: voxelTile_07
+  - first:
+      213: 21300444
+    second: voxelTile_08
+  - first:
+      213: 21300446
+    second: voxelTile_09
+  - first:
+      213: 21300448
+    second: voxelTile_10
+  - first:
+      213: 21300450
+    second: voxelTile_11
+  - first:
+      213: 21300452
+    second: voxelTile_12
+  - first:
+      213: 21300454
+    second: voxelTile_13
+  - first:
+      213: 21300456
+    second: voxelTile_14
+  - first:
+      213: 21300458
+    second: voxelTile_15
+  - first:
+      213: 21300460
+    second: voxelTile_16
+  - first:
+      213: 21300462
+    second: voxelTile_17
+  - first:
+      213: 21300464
+    second: voxelTile_18
+  - first:
+      213: 21300466
+    second: voxelTile_19
+  - first:
+      213: 21300468
+    second: voxelTile_20
+  - first:
+      213: 21300470
+    second: voxelTile_21
+  - first:
+      213: 21300472
+    second: voxelTile_22
+  - first:
+      213: 21300474
+    second: voxelTile_23
+  - first:
+      213: 21300476
+    second: voxelTile_24
+  - first:
+      213: 21300478
+    second: voxelTile_25
+  - first:
+      213: 21300480
+    second: voxelTile_26
+  - first:
+      213: 21300482
+    second: voxelTile_27
+  - first:
+      213: 21300484
+    second: voxelTile_28
+  - first:
+      213: 21300486
+    second: voxelTile_29
+  - first:
+      213: 21300488
+    second: voxelTile_30
+  - first:
+      213: 21300490
+    second: voxelTile_31
+  - first:
+      213: 21300492
+    second: voxelTile_32
+  - first:
+      213: 21300494
+    second: voxelTile_33
+  - first:
+      213: 21300496
+    second: voxelTile_34
+  - first:
+      213: 21300498
+    second: voxelTile_35
+  - first:
+      213: 21300500
+    second: voxelTile_36
+  - first:
+      213: 21300502
+    second: voxelTile_37
+  - first:
+      213: 21300504
+    second: voxelTile_38
+  - first:
+      213: 21300506
+    second: voxelTile_39
+  - first:
+      213: 21300508
+    second: voxelTile_40
+  - first:
+      213: 21300510
+    second: voxelTile_41
+  - first:
+      213: 21300512
+    second: voxelTile_42
+  - first:
+      213: 21300514
+    second: voxelTile_43
+  - first:
+      213: 21300516
+    second: voxelTile_44
+  - first:
+      213: 21300518
+    second: voxelTile_45
+  - first:
+      213: 21300520
+    second: voxelTile_46
+  - first:
+      213: 21300522
+    second: voxelTile_47
+  - first:
+      213: 21300524
+    second: voxelTile_48
+  - first:
+      213: 21300526
+    second: voxelTile_49
+  - first:
+      213: 21300528
+    second: voxelTile_50
+  - first:
+      213: 21300530
+    second: voxelTile_51
+  - first:
+      213: 21300532
+    second: voxelTile_52
+  - first:
+      213: 21300534
+    second: voxelTile_53
+  - first:
+      213: 21300536
+    second: voxelTile_54
+  - first:
+      213: 21300538
+    second: voxelTile_55
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 16
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 80
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: abstractTile_01
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1017
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2405410000000000800000000000000
+      internalID: 21300270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_02
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 243
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03405410000000000800000000000000
+      internalID: 21300272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_03
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 372
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23405410000000000800000000000000
+      internalID: 21300274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_04
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 501
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43405410000000000800000000000000
+      internalID: 21300276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_05
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 630
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63405410000000000800000000000000
+      internalID: 21300278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_06
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 759
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83405410000000000800000000000000
+      internalID: 21300280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_07
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 888
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3405410000000000800000000000000
+      internalID: 21300282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_08
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1017
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3405410000000000800000000000000
+      internalID: 21300284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_09
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1146
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3405410000000000800000000000000
+      internalID: 21300286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_10
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1275
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04405410000000000800000000000000
+      internalID: 21300288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_11
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1404
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24405410000000000800000000000000
+      internalID: 21300290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_12
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1533
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44405410000000000800000000000000
+      internalID: 21300292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_13
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1662
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64405410000000000800000000000000
+      internalID: 21300294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1791
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84405410000000000800000000000000
+      internalID: 21300296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_15
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1920
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4405410000000000800000000000000
+      internalID: 21300298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_16
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 114
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4405410000000000800000000000000
+      internalID: 21300300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_17
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 243
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4405410000000000800000000000000
+      internalID: 21300302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_18
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 372
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05405410000000000800000000000000
+      internalID: 21300304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_19
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 501
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25405410000000000800000000000000
+      internalID: 21300306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_20
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 630
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45405410000000000800000000000000
+      internalID: 21300308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_21
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 759
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65405410000000000800000000000000
+      internalID: 21300310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_22
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 888
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85405410000000000800000000000000
+      internalID: 21300312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_23
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1017
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5405410000000000800000000000000
+      internalID: 21300314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_24
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1146
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5405410000000000800000000000000
+      internalID: 21300316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_25
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1275
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5405410000000000800000000000000
+      internalID: 21300318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_26
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1404
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06405410000000000800000000000000
+      internalID: 21300320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_27
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1533
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26405410000000000800000000000000
+      internalID: 21300322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_28
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1662
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46405410000000000800000000000000
+      internalID: 21300324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_29
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1791
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66405410000000000800000000000000
+      internalID: 21300326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_30
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1920
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86405410000000000800000000000000
+      internalID: 21300328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_31
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 114
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6405410000000000800000000000000
+      internalID: 21300330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: abstractTile_32
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 243
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6405410000000000800000000000000
+      internalID: 21300332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_01
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 372
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6405410000000000800000000000000
+      internalID: 21300334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_02
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 501
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07405410000000000800000000000000
+      internalID: 21300336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_03
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 630
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27405410000000000800000000000000
+      internalID: 21300338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_04
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 759
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47405410000000000800000000000000
+      internalID: 21300340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_05
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 888
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67405410000000000800000000000000
+      internalID: 21300342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_06
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1017
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87405410000000000800000000000000
+      internalID: 21300344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_07
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1146
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7405410000000000800000000000000
+      internalID: 21300346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_08
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1275
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7405410000000000800000000000000
+      internalID: 21300348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_09
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1404
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7405410000000000800000000000000
+      internalID: 21300350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_10
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1533
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08405410000000000800000000000000
+      internalID: 21300352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_11
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1662
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28405410000000000800000000000000
+      internalID: 21300354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_12
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1791
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48405410000000000800000000000000
+      internalID: 21300356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_13
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1920
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68405410000000000800000000000000
+      internalID: 21300358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_14
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 114
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88405410000000000800000000000000
+      internalID: 21300360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_15
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 243
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8405410000000000800000000000000
+      internalID: 21300362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_16
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 372
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8405410000000000800000000000000
+      internalID: 21300364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_17
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 501
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8405410000000000800000000000000
+      internalID: 21300366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_18
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 630
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09405410000000000800000000000000
+      internalID: 21300368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_19
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 759
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29405410000000000800000000000000
+      internalID: 21300370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_20
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 888
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49405410000000000800000000000000
+      internalID: 21300372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_21
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1017
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69405410000000000800000000000000
+      internalID: 21300374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_22
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1146
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89405410000000000800000000000000
+      internalID: 21300376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_23
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1275
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9405410000000000800000000000000
+      internalID: 21300378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_24
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1404
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9405410000000000800000000000000
+      internalID: 21300380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_25
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1533
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9405410000000000800000000000000
+      internalID: 21300382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_26
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1662
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a405410000000000800000000000000
+      internalID: 21300384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_27
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1791
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a405410000000000800000000000000
+      internalID: 21300386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_28
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1920
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a405410000000000800000000000000
+      internalID: 21300388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_29
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 114
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a405410000000000800000000000000
+      internalID: 21300390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_30
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 243
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a405410000000000800000000000000
+      internalID: 21300392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_31
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 372
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa405410000000000800000000000000
+      internalID: 21300394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_32
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 501
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca405410000000000800000000000000
+      internalID: 21300396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_33
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 630
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea405410000000000800000000000000
+      internalID: 21300398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_34
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 759
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b405410000000000800000000000000
+      internalID: 21300400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_35
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 888
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b405410000000000800000000000000
+      internalID: 21300402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_36
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 114
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b405410000000000800000000000000
+      internalID: 21300404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_37
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1146
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b405410000000000800000000000000
+      internalID: 21300406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_38
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1275
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b405410000000000800000000000000
+      internalID: 21300408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_39
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1404
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab405410000000000800000000000000
+      internalID: 21300410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_40
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1533
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb405410000000000800000000000000
+      internalID: 21300412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_41
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1662
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb405410000000000800000000000000
+      internalID: 21300414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_42
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1791
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c405410000000000800000000000000
+      internalID: 21300416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_43
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1920
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c405410000000000800000000000000
+      internalID: 21300418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_44
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 114
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c405410000000000800000000000000
+      internalID: 21300420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_45
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 243
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c405410000000000800000000000000
+      internalID: 21300422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_46
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 372
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c405410000000000800000000000000
+      internalID: 21300424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_47
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 501
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac405410000000000800000000000000
+      internalID: 21300426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerTile_48
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 630
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc405410000000000800000000000000
+      internalID: 21300428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_01
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 759
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec405410000000000800000000000000
+      internalID: 21300430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_02
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 888
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d405410000000000800000000000000
+      internalID: 21300432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_03
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1017
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d405410000000000800000000000000
+      internalID: 21300434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_04
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1146
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d405410000000000800000000000000
+      internalID: 21300436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_05
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1275
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d405410000000000800000000000000
+      internalID: 21300438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_06
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1404
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d405410000000000800000000000000
+      internalID: 21300440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_07
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1533
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad405410000000000800000000000000
+      internalID: 21300442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_08
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1662
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd405410000000000800000000000000
+      internalID: 21300444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_09
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1791
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed405410000000000800000000000000
+      internalID: 21300446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_10
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1920
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e405410000000000800000000000000
+      internalID: 21300448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_11
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 114
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e405410000000000800000000000000
+      internalID: 21300450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_12
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 243
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e405410000000000800000000000000
+      internalID: 21300452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_13
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 372
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e405410000000000800000000000000
+      internalID: 21300454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_14
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 501
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e405410000000000800000000000000
+      internalID: 21300456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 630
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae405410000000000800000000000000
+      internalID: 21300458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_16
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 759
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce405410000000000800000000000000
+      internalID: 21300460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_17
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 888
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee405410000000000800000000000000
+      internalID: 21300462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_18
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1017
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f405410000000000800000000000000
+      internalID: 21300464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_19
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1146
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f405410000000000800000000000000
+      internalID: 21300466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_20
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1275
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f405410000000000800000000000000
+      internalID: 21300468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_21
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1404
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f405410000000000800000000000000
+      internalID: 21300470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_22
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1533
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f405410000000000800000000000000
+      internalID: 21300472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1662
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af405410000000000800000000000000
+      internalID: 21300474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_24
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1791
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf405410000000000800000000000000
+      internalID: 21300476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_25
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1920
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef405410000000000800000000000000
+      internalID: 21300478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_26
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 114
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00505410000000000800000000000000
+      internalID: 21300480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_27
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 243
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20505410000000000800000000000000
+      internalID: 21300482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_28
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 372
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40505410000000000800000000000000
+      internalID: 21300484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_29
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 501
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60505410000000000800000000000000
+      internalID: 21300486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_30
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 630
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80505410000000000800000000000000
+      internalID: 21300488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_31
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 759
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0505410000000000800000000000000
+      internalID: 21300490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_32
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 888
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0505410000000000800000000000000
+      internalID: 21300492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_33
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1017
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0505410000000000800000000000000
+      internalID: 21300494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_34
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1146
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01505410000000000800000000000000
+      internalID: 21300496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_35
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1275
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21505410000000000800000000000000
+      internalID: 21300498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_36
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1404
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41505410000000000800000000000000
+      internalID: 21300500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_37
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1533
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61505410000000000800000000000000
+      internalID: 21300502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_38
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1662
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81505410000000000800000000000000
+      internalID: 21300504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_39
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1791
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1505410000000000800000000000000
+      internalID: 21300506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_40
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1920
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1505410000000000800000000000000
+      internalID: 21300508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1505410000000000800000000000000
+      internalID: 21300510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 243
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02505410000000000800000000000000
+      internalID: 21300512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 372
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22505410000000000800000000000000
+      internalID: 21300514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 501
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42505410000000000800000000000000
+      internalID: 21300516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 630
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62505410000000000800000000000000
+      internalID: 21300518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 759
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82505410000000000800000000000000
+      internalID: 21300520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 888
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2505410000000000800000000000000
+      internalID: 21300522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1017
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2505410000000000800000000000000
+      internalID: 21300524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1146
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2505410000000000800000000000000
+      internalID: 21300526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1275
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03505410000000000800000000000000
+      internalID: 21300528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1404
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23505410000000000800000000000000
+      internalID: 21300530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1533
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43505410000000000800000000000000
+      internalID: 21300532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1662
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63505410000000000800000000000000
+      internalID: 21300534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1791
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83505410000000000800000000000000
+      internalID: 21300536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: voxelTile_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 111
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3505410000000000800000000000000
+      internalID: 21300538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      abstractTile_01: 21300270
+      abstractTile_02: 21300272
+      abstractTile_03: 21300274
+      abstractTile_04: 21300276
+      abstractTile_05: 21300278
+      abstractTile_06: 21300280
+      abstractTile_07: 21300282
+      abstractTile_08: 21300284
+      abstractTile_09: 21300286
+      abstractTile_10: 21300288
+      abstractTile_11: 21300290
+      abstractTile_12: 21300292
+      abstractTile_13: 21300294
+      abstractTile_14: 21300296
+      abstractTile_15: 21300298
+      abstractTile_16: 21300300
+      abstractTile_17: 21300302
+      abstractTile_18: 21300304
+      abstractTile_19: 21300306
+      abstractTile_20: 21300308
+      abstractTile_21: 21300310
+      abstractTile_22: 21300312
+      abstractTile_23: 21300314
+      abstractTile_24: 21300316
+      abstractTile_25: 21300318
+      abstractTile_26: 21300320
+      abstractTile_27: 21300322
+      abstractTile_28: 21300324
+      abstractTile_29: 21300326
+      abstractTile_30: 21300328
+      abstractTile_31: 21300330
+      abstractTile_32: 21300332
+      platformerTile_01: 21300334
+      platformerTile_02: 21300336
+      platformerTile_03: 21300338
+      platformerTile_04: 21300340
+      platformerTile_05: 21300342
+      platformerTile_06: 21300344
+      platformerTile_07: 21300346
+      platformerTile_08: 21300348
+      platformerTile_09: 21300350
+      platformerTile_10: 21300352
+      platformerTile_11: 21300354
+      platformerTile_12: 21300356
+      platformerTile_13: 21300358
+      platformerTile_14: 21300360
+      platformerTile_15: 21300362
+      platformerTile_16: 21300364
+      platformerTile_17: 21300366
+      platformerTile_18: 21300368
+      platformerTile_19: 21300370
+      platformerTile_20: 21300372
+      platformerTile_21: 21300374
+      platformerTile_22: 21300376
+      platformerTile_23: 21300378
+      platformerTile_24: 21300380
+      platformerTile_25: 21300382
+      platformerTile_26: 21300384
+      platformerTile_27: 21300386
+      platformerTile_28: 21300388
+      platformerTile_29: 21300390
+      platformerTile_30: 21300392
+      platformerTile_31: 21300394
+      platformerTile_32: 21300396
+      platformerTile_33: 21300398
+      platformerTile_34: 21300400
+      platformerTile_35: 21300402
+      platformerTile_36: 21300404
+      platformerTile_37: 21300406
+      platformerTile_38: 21300408
+      platformerTile_39: 21300410
+      platformerTile_40: 21300412
+      platformerTile_41: 21300414
+      platformerTile_42: 21300416
+      platformerTile_43: 21300418
+      platformerTile_44: 21300420
+      platformerTile_45: 21300422
+      platformerTile_46: 21300424
+      platformerTile_47: 21300426
+      platformerTile_48: 21300428
+      voxelTile_01: 21300430
+      voxelTile_02: 21300432
+      voxelTile_03: 21300434
+      voxelTile_04: 21300436
+      voxelTile_05: 21300438
+      voxelTile_06: 21300440
+      voxelTile_07: 21300442
+      voxelTile_08: 21300444
+      voxelTile_09: 21300446
+      voxelTile_10: 21300448
+      voxelTile_11: 21300450
+      voxelTile_12: 21300452
+      voxelTile_13: 21300454
+      voxelTile_14: 21300456
+      voxelTile_15: 21300458
+      voxelTile_16: 21300460
+      voxelTile_17: 21300462
+      voxelTile_18: 21300464
+      voxelTile_19: 21300466
+      voxelTile_20: 21300468
+      voxelTile_21: 21300470
+      voxelTile_22: 21300472
+      voxelTile_23: 21300474
+      voxelTile_24: 21300476
+      voxelTile_25: 21300478
+      voxelTile_26: 21300480
+      voxelTile_27: 21300482
+      voxelTile_28: 21300484
+      voxelTile_29: 21300486
+      voxelTile_30: 21300488
+      voxelTile_31: 21300490
+      voxelTile_32: 21300492
+      voxelTile_33: 21300494
+      voxelTile_34: 21300496
+      voxelTile_35: 21300498
+      voxelTile_36: 21300500
+      voxelTile_37: 21300502
+      voxelTile_38: 21300504
+      voxelTile_39: 21300506
+      voxelTile_40: 21300508
+      voxelTile_41: 21300510
+      voxelTile_42: 21300512
+      voxelTile_43: 21300514
+      voxelTile_44: 21300516
+      voxelTile_45: 21300518
+      voxelTile_46: 21300520
+      voxelTile_47: 21300522
+      voxelTile_48: 21300524
+      voxelTile_49: 21300526
+      voxelTile_50: 21300528
+      voxelTile_51: 21300530
+      voxelTile_52: 21300532
+      voxelTile_53: 21300534
+      voxelTile_54: 21300536
+      voxelTile_55: 21300538
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
