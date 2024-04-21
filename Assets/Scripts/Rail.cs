@@ -14,38 +14,38 @@ public class Rail
     public Sprite leftUp;
     public Sprite rightUp;
 
-    Vector2 tilePosition;
-    Vector2 linkDirection1;
-    Vector2 linkDirection2;
+    Vector2Int tilePosition;
+    Vector2Int linkDirection1;
+    Vector2Int linkDirection2;
 
-    public Rail(Vector2 pos, string tileName)
+    public Rail(Vector2Int pos, string tileName)
     {
         this.tilePosition = pos;
         switch(tileName) 
         {
             case "rail_horizontal":
-                linkDirection1 = Vector2.left;
-                linkDirection2 = Vector2.right;
+                linkDirection1 = Vector2Int.left;
+                linkDirection2 = Vector2Int.right;
                 break;
             case "rail_vertical":
-                linkDirection1 = Vector2.down;
-                linkDirection2 = Vector2.up;
+                linkDirection1 = Vector2Int.down;
+                linkDirection2 = Vector2Int.up;
                 break;
             case "rail_leftDown":
-                linkDirection1 = Vector2.left;
-                linkDirection2 = Vector2.down;
+                linkDirection1 = Vector2Int.left;
+                linkDirection2 = Vector2Int.down;
                 break;
             case "rail_leftUp":
-                linkDirection1 = Vector2.left;
-                linkDirection2 = Vector2.up;
+                linkDirection1 = Vector2Int.left;
+                linkDirection2 = Vector2Int.up;
                 break;
             case "rail_rightDown":
-                linkDirection1 = Vector2.right;
-                linkDirection2 = Vector2.down;
+                linkDirection1 = Vector2Int.right;
+                linkDirection2 = Vector2Int.down;
                 break;
             case "rail_rightUp":
-                linkDirection1 = Vector2.right;
-                linkDirection2 = Vector2.up;
+                linkDirection1 = Vector2Int.right;
+                linkDirection2 = Vector2Int.up;
                 break;
             default:
                 Debug.Log("False Sprite!");
@@ -58,12 +58,12 @@ public class Rail
         //–ŒÃ¨‘§º∆À„
     }
 
-    public Vector2 GetLinkDirection1()
+    public Vector2Int GetLinkDirection1()
     {
         return linkDirection1;
     }
 
-    public Vector2 GetLinkDirection2()
+    public Vector2Int GetLinkDirection2()
     {
         return linkDirection2;
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,13 @@ public class GameManager : MonoBehaviour
 
     public static Train player;
     public static Rail[,] railArray = new Rail[8,8];
+
+    public enum States
+    { 
+        等待操作,
+        播放动画
+    };
+    public static States state;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +38,9 @@ public class GameManager : MonoBehaviour
         //拷贝火车对象副本并初始化玩家对象
         player = Instantiate(train, startStationWorld, Quaternion.identity).GetComponent<Train>();
 
-        //设置火车初始朝向
+        //设置火车初始网格坐标和朝向
+        player.SetPosition(startStation);
+
         Rail startRail = railArray[startStation.x, startStation.y];
         Vector2 dir1 = startStation + startRail.GetLinkDirection1();
         if(dir1.x < 0 || dir1.y < 0)
@@ -49,9 +59,12 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //测试用键盘事件监听
-        if (Input.GetKeyDown(KeyCode.R))
+        if(state==States.等待操作)
         {
-            player.Move();
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                player.Move();
+            }
         }
         //更新鼠标位置
 
@@ -88,7 +101,7 @@ public class GameManager : MonoBehaviour
 
     Rail RailInitialize(int x, int y,string tileName)
     {
-        return new Rail(new Vector2(x, y), tileName);
+        return new Rail(new Vector2Int(x, y), tileName);
     }
 
     void SetRail()
