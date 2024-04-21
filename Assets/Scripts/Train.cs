@@ -6,8 +6,15 @@ public class Train : MonoBehaviour
 {
     Vector2 position;
     Vector2 forwardDirection;
+
+    Animator animator;
+
+    void Start()
+    {
+        
+    }
     
-    void Move()
+    public void Move()
     {
         //如果前进方向有铁轨，则移动火车
 
@@ -28,5 +35,12 @@ public class Train : MonoBehaviour
         //位置事件判定
     }
 
+    public void SetForwardDirection(Vector2 direction)
+    {
+        forwardDirection = direction;
 
+        animator = GetComponent<Animator>();
+        animator.SetFloat("DirectionX", forwardDirection.x);
+        animator.SetFloat("DirectionY", forwardDirection.y);
+    }
 }
