@@ -54,12 +54,11 @@ public class Train : MonoBehaviour
     private IEnumerator MoveCoroutine(Vector2Int startPos)
     {
         GameManager.state = GameManager.States.播放动画;
-        Tilemap railMap = GameObject.Find("Rail").GetComponent<Tilemap>();
 
         //获取起止世界坐标
-        Vector3 startPosition = railMap.GetCellCenterWorld(new Vector3Int(startPos.x, startPos.y, 0));
+        Vector3 startPosition = GameManager.railMap.GetCellCenterWorld(new Vector3Int(startPos.x, startPos.y, 0));
         startPosition.y += 0.25f;
-        Vector3 endPosition = railMap.GetCellCenterWorld(new Vector3Int(startPos.x + forwardDirection.x, startPos.y + forwardDirection.y, 0));
+        Vector3 endPosition = GameManager.railMap.GetCellCenterWorld(new Vector3Int(startPos.x + forwardDirection.x, startPos.y + forwardDirection.y, 0));
         endPosition.y += 0.25f;
         float elapsedTime = 0f;
 
