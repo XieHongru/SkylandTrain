@@ -121,7 +121,6 @@ public class GameManager : MonoBehaviour
                     }
                     else
                     {
-                        previewMap.color = new Color(1, 1, 1, 0.5f);
                         Debug.Log("当前可放置的铁轨数量:" + rails);
                         state = States.放置铁轨;
                     }
@@ -154,48 +153,27 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        //初始化障碍物数组
-        //if (groundMap != null)
-        //{
-        //    for (int i = 0; i < 8; i++)
-        //    {
-        //        for (int j = 0; j < 8; j++)
-        //        {
-        //            Vector3Int cellPosition = new Vector3Int(i, j, 0);
-        //            if (railMap.HasTile(cellPosition))
-        //            {
-        //                railArray[i, j] = RailInitialize(i, j, railMap.GetTile(cellPosition).name);
-
-        //                //Debug.Log(railArray[i, j] + ",position:" + railArray[i, j].tilePosition + ",direction:" + railArray[i, j].linkDirection1 + "," + railArray[i, j].linkDirection2);
-        //            }
-        //        }
-        //    }
-        //}
-        //else
-        //{
-        //    Debug.Log("没有找到Tilemap中的地形图层");
-        //}
-
-        //检查并初始化铁轨对象数组
-        if (railMap != null)
+        //初始化铁轨对象数组
+        for (int i = 0; i < 8; i++)
         {
-            for (int i = 0; i < 8; i++)
+            for (int j = 0; j < 8; j++)
             {
-                for (int j = 0; j < 8; j++)
+                //探测(i,j)坐标上的网格信息
+                Vector3Int cellPosition = new Vector3Int(i, j, 0);
+                //铁轨图层探测
+                if(railMap.HasTile(cellPosition))
                 {
-                    Vector3Int cellPosition = new Vector3Int(i, j, 0);
-                    if(railMap.HasTile(cellPosition))
-                    {
-                        railArray[i,j] = RailInitialize(i,j,railMap.GetTile(cellPosition).name);
+                    obstacleArray[i,j] = 1;
+                    railArray[i,j] = RailInitialize(i, j, railMap.GetTile(cellPosition).name);
 
-                        //Debug.Log(railArray[i, j] + ",position:" + railArray[i, j].tilePosition + ",direction:" + railArray[i, j].linkDirection1 + "," + railArray[i, j].linkDirection2);
-                    }
+                    //Debug.Log(railArray[i, j] + ",position:" + railArray[i, j].tilePosition + ",direction:" + railArray[i, j].linkDirection1 + "," + railArray[i, j].linkDirection2);
+                }
+                //地形图层探测
+                if(groundMap.GetTile(cellPosition).name == "rock")
+                {
+                    obstacleArray[i,j] = 2;
                 }
             }
-        }
-        else
-        {
-            Debug.Log("没有找到Tilemap中的铁轨图层");
         }
     }
 
@@ -223,8 +201,17 @@ public class GameManager : MonoBehaviour
             return;
         if(MapBoundTest(new Vector2Int(mouseCellPos.x, mouseCellPos.y)))
         {
-            previewRail = new Rail(new Vector2Int(mouseCellPos.x, mouseCellPos.y));
-            previewRail.PreCalculate();
+            if (obstacleArray[mouseCellPos.x,mouseCellPos.y] == 0)
+            {
+                previewMap.color = new Color(1, 1, 1, 0.5f);
+                previewRail = new Rail(new Vector2Int(mouseCellPos.x, mouseCellPos.y));
+                previewRail.PreCalculate();
+            }
+            else
+            {
+                previewMap.color = new Color(1, 0, 0, 0.5f);
+                previewMap.SetTile(mouseCellPos, rail_horizontal);
+            }
         }
     }
 
@@ -232,21 +219,28 @@ public class GameManager : MonoBehaviour
     {
         if( rails>0 )
         {
-            rails--;
-            Debug.Log("放置成功，剩余铁轨数量：" + rails);
-            //if( rails==0 )
-            //{
-            //    state = States.等待操作;
-            //}
-
-            if (MapBoundTest(new Vector2Int(mouseCellPos.x, mouseCellPos.y)))
+            if ( obstacleArray[mouseCellPos.x, mouseCellPos.y ] != 0)
             {
-                //放置铁轨
-                previewRail.SetTile();
-                //更新railArray
-                railArray[mouseCellPos.x, mouseCellPos.y] = previewRail;
-                //处理连接铁轨可能的转向问题
-                previewRail.LinkNeighbour();
+                Debug.Log("不能将铁轨放置在障碍物上！");
+            }
+            else
+            {
+                rails--;
+                Debug.Log("放置成功，剩余铁轨数量：" + rails);
+                //if( rails==0 )
+                //{
+                //    state = States.等待操作;
+                //}
+
+                if (MapBoundTest(new Vector2Int(mouseCellPos.x, mouseCellPos.y)))
+                {
+                    //放置铁轨
+                    previewRail.SetTile();
+                    //更新railArray
+                    railArray[mouseCellPos.x, mouseCellPos.y] = previewRail;
+                    //处理连接铁轨可能的转向问题
+                    previewRail.LinkNeighbour();
+                }
             }
         }
         else
