@@ -139,7 +139,113 @@ public class Rail
         }
         else if (connection.Count == 4)
         {
+            Rail detectRail = null;
+            //横向铁轨计数
+            int count_horizontal = 0;
+            //向左计数
+            detectPos = tilePosition + Vector2Int.left;
+            if (GameManager.MapBoundTest(detectPos))
+                detectRail = GameManager.railArray[detectPos.x, detectPos.y];
+            while (detectRail != null)
+            {
+                count_horizontal++;
+                detectPos = detectRail.tilePosition + Vector2Int.left;
+                if(GameManager.MapBoundTest(detectPos))
+                {
+                    detectRail = GameManager.railArray[detectPos.x, detectPos.y];
+                    //还需要判断探测目标铁轨是否在该方向上是相连的
+                    if (GameManager.railArray[detectPos.x, detectPos.y] == null || (GameManager.railArray[detectPos.x, detectPos.y].GetLinkDirection1() != Vector2Int.right &&
+                        GameManager.railArray[detectPos.x, detectPos.y].GetLinkDirection2() != Vector2Int.right))
+                    {
+                        detectRail = null;
+                    }
+                }
+                else
+                {
+                    detectRail = null;
+                }
+            }
+            //向右计数
+            detectRail = null;
+            detectPos = tilePosition + Vector2Int.right;
+            if (GameManager.MapBoundTest(detectPos))
+                detectRail = GameManager.railArray[detectPos.x, detectPos.y];
+            while (detectRail != null)
+            {
+                count_horizontal++;
+                detectPos = detectRail.tilePosition + Vector2Int.right;
+                if (GameManager.MapBoundTest(detectPos))
+                {
+                    detectRail = GameManager.railArray[detectPos.x, detectPos.y];
+                    //还需要判断探测目标铁轨是否在该方向上是相连的
+                    if (GameManager.railArray[detectPos.x, detectPos.y] == null || (GameManager.railArray[detectPos.x, detectPos.y].GetLinkDirection1() != Vector2Int.left &&
+                        GameManager.railArray[detectPos.x, detectPos.y].GetLinkDirection2() != Vector2Int.left))
+                    {
+                        detectRail = null;
+                    }
+                }
+                else
+                {
+                    detectRail = null;
+                }
+            }
+            //纵向铁轨计数
+            int count_vertical = 0;
+            //向上计数
+            detectRail = null;
+            detectPos = tilePosition + Vector2Int.up;
+            if (GameManager.MapBoundTest(detectPos))
+                detectRail = GameManager.railArray[detectPos.x, detectPos.y];
+            while (detectRail != null)
+            {
+                count_vertical++;
+                detectPos = detectRail.tilePosition + Vector2Int.up;
+                if (GameManager.MapBoundTest(detectPos))
+                {
+                    detectRail = GameManager.railArray[detectPos.x, detectPos.y];
+                    //还需要判断探测目标铁轨是否在该方向上是相连的
+                    if (GameManager.railArray[detectPos.x, detectPos.y] == null || (GameManager.railArray[detectPos.x, detectPos.y].GetLinkDirection1() != Vector2Int.down &&
+                        GameManager.railArray[detectPos.x, detectPos.y].GetLinkDirection2() != Vector2Int.down))
+                    {
+                        detectRail = null;
+                    }
+                }
+                else
+                {
+                    detectRail = null;
+                }
+            }
+            //向下计数
+            detectRail = null;
+            detectPos = tilePosition + Vector2Int.down;
+            if (GameManager.MapBoundTest(detectPos))
+                detectRail = GameManager.railArray[detectPos.x, detectPos.y];
+            while (detectRail != null)
+            {
+                count_vertical++;
+                detectPos = detectRail.tilePosition + Vector2Int.down;
+                if (GameManager.MapBoundTest(detectPos))
+                {
+                    detectRail = GameManager.railArray[detectPos.x, detectPos.y];
+                    //还需要判断探测目标铁轨是否在该方向上是相连的
+                    if (GameManager.railArray[detectPos.x, detectPos.y] == null || (GameManager.railArray[detectPos.x, detectPos.y].GetLinkDirection1() != Vector2Int.up &&
+                        GameManager.railArray[detectPos.x, detectPos.y].GetLinkDirection2() != Vector2Int.up))
+                    {
+                        detectRail = null;
+                    }
+                }
+                else
+                {
+                    detectRail = null;
+                }
+            }
 
+            //仅当连接后的纵向铁轨数大于横向才设置为纵向
+            if(count_vertical > count_horizontal)
+            {
+                SetLinkDirection("rail_vertical");
+                tile = GameManager.rail_vertical;
+            }
         }
 
 
@@ -182,6 +288,8 @@ public class Rail
                 //如果没有，则将其连接方向2与新铁轨相连
                 linkedRail1.SetLinkDirection2(this.tilePosition - linkedRail1.tilePosition);
             }
+
+            //计算改变后铁轨贴图
             ArrayList connection = new ArrayList();
             for (int i = 0; i < 4; ++i)
             {
@@ -215,6 +323,8 @@ public class Rail
                 //如果没有，则将其连接方向2与新铁轨相连
                 linkedRail2.SetLinkDirection2(this.tilePosition - linkedRail2.tilePosition);
             }
+
+            //计算改变后铁轨贴图
             ArrayList connection = new ArrayList();
             for (int i = 0; i < 4; ++i)
             {
@@ -287,6 +397,7 @@ public class Rail
         GameManager.railMap.SetTile(new Vector3Int(tilePosition.x, tilePosition.y, 0), tile);
     }
 
+    //对于连接方向编码值的和value，设置rail对象当前瓦片贴图形态
     void CalRailSprite(int value, int connection0, Rail rail)
     {
         //计算铁轨形态

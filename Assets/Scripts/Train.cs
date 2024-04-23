@@ -86,6 +86,11 @@ public class Train : MonoBehaviour
         //位置事件判定
     }
 
+    public Vector2Int GetPosition()
+    {
+        return position;
+    }
+
     public void SetPosition(Vector2Int position)
     {
         this.position = position;
