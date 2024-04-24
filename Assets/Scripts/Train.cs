@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using static UnityEditor.PlayerSettings;
 
 public class Train : MonoBehaviour
 {
@@ -16,19 +17,45 @@ public class Train : MonoBehaviour
         animator = GetComponent<Animator>();
     }
     
-    public void Move()
+    public bool Move()
     {
-        //如果前进方向有铁轨，则移动火车
-        Rail nextRail = GameManager.railArray[position.x + forwardDirection.x, position.y + forwardDirection.y];
-        if ( nextRail != null )
+        if (!GameManager.MapBoundTest(position + forwardDirection))
         {
-            MoveToCell(nextRail);
+            return false;
         }
         else
         {
-            Debug.Log("不允许继续前进！");
+            //如果前进方向有铁轨，则移动火车
+            Rail nextRail = GameManager.railArray[position.x + forwardDirection.x, position.y + forwardDirection.y];
+            if (nextRail != null)
+            {
+                //判断前方是否是终点，如果是，判断是否能够进入
+                if (position + forwardDirection == GameManager.end)
+                {
+                    if (GameManager.CheckWin())
+                    {
+                        Debug.Log("关卡通过！");
+                        MoveToCell(nextRail);
+                        return true;
+                    }
+                    else
+                    {
+                        Debug.Log("未经过所有检查点！");
+                        return false;
+                    }
+                }
+                else
+                {
+                    MoveToCell(nextRail);
+                    return true;
+                }
+            }
+            else
+            {
+                Debug.Log("不允许继续前进！");
+                return false;
+            }
         }
-
     }
 
     void MoveToCell(Rail nextRail)
@@ -38,6 +65,26 @@ public class Train : MonoBehaviour
 
         //更新火车位置坐标
         position += forwardDirection;
+
+        GameObject detectGO = GameManager.propArray[position.x, position.y];
+        //判断是否获得道具
+        if (detectGO)
+        {
+            //十字镐
+            if(detectGO.CompareTag("Pickaxe"))
+            {
+                GameManager.pickaxe++;
+                Debug.Log("获得十字镐，剩余数量" + GameManager.pickaxe);
+                Destroy(detectGO);
+            }
+        }
+        //判断是否经过检查点
+        if (GameManager.checkPointArray[position.x, position.y])
+        {
+            GameManager.checkPointArray[position.x, position.y] = false;
+            GameManager.checkPoints--;
+            Debug.Log("经过检查点！");
+        }
 
         //更新火车前进方向和贴图
         if (nextRail.GetLinkDirection1() == -1 * forwardDirection)
@@ -72,7 +119,19 @@ public class Train : MonoBehaviour
 
         // 确保移动到目标位置
         transform.position = endPosition;
-        GameManager.state = GameManager.States.等待操作;
+
+        if(GameManager.continuouslyMove)
+        {
+            if(!Move())
+            {
+                GameManager.continuouslyMove = false;
+                GameManager.state = GameManager.States.等待操作;
+            }
+        }
+        else
+        {
+            GameManager.state = GameManager.States.等待操作;
+        }
     }
 
     GameObject GetItem()

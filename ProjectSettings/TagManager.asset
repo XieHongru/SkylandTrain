@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Pickaxe
+  - Bomb
   layers:
   - Default
   - TransparentFX
@@ -50,6 +52,9 @@ TagManager:
   - name: Preview
     uniqueID: 1740213787
     locked: 0
-  - name: Player
+  - name: Prop
+    uniqueID: 1902803941
+    locked: 0
+  - name: Player and Obstacle
     uniqueID: 1548363011
     locked: 0

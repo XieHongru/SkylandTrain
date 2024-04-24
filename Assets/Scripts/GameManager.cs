@@ -11,11 +11,17 @@ public class GameManager : MonoBehaviour
     //测试用起点终点坐标，是否沿用待定，TileMap坐标
     public Vector2Int startStation;
     public Vector2Int endStation;
+    public static Vector2Int start;
+    public static Vector2Int end;
 
     public static Train player;
     public static Rail[,] railArray = new Rail[8,8];
     //障碍物表，0表示空地，1表示铁轨，2表示山，3表示湖
     public static int[,] obstacleArray = new int[8,8]; 
+    //道具表
+    public static GameObject[,] propArray = new GameObject[8,8];
+    //检查点表
+    public static bool[,] checkPointArray = new bool[8,8];
     public static Camera mainCamera;
 
     //记录鼠标坐标
@@ -31,6 +37,7 @@ public class GameManager : MonoBehaviour
     };
     //游戏的当前操作状态
     public static States state;
+    public static bool continuouslyMove;
 
     //网格变化判定
     bool cellChange = false;
@@ -42,6 +49,7 @@ public class GameManager : MonoBehaviour
     public static Tilemap railMap;
     public static Tilemap groundMap;
     public static Tilemap previewMap;
+    public static Tilemap obstacleMap;
 
     //铁轨贴图，拐弯贴图以两个连接方向命名
     public static Tile rail_horizontal;
@@ -58,14 +66,17 @@ public class GameManager : MonoBehaviour
     public static Tile ground;
 
     //全局参数
+    public static int checkPoints;
     public int rails;
-    public int pickaxe;
+    public int init_pickaxe;
+    public static int pickaxe;
 
     // Start is called before the first frame update
     void Start()
     {
         //初始化相机
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        mainCamera.transparencySortAxis = new Vector3(0.49f, 2f, 0.49f);
 
         //初始化贴图
         rail_horizontal = Resources.Load<Tile>("Palettes/rail_horizontal");
@@ -81,11 +92,18 @@ public class GameManager : MonoBehaviour
         railMap = GameObject.Find("Rail").GetComponent<Tilemap>();
         groundMap = GameObject.Find("Ground").GetComponent<Tilemap>();
         previewMap = GameObject.Find("Preview").GetComponent<Tilemap>();
+        obstacleMap = GameObject.Find("Obstacle").GetComponent<Tilemap>();
+
+        continuouslyMove = false;
+        pickaxe = init_pickaxe;
+        checkPoints = 0;
 
         //将TileMap信息转化为状态数组
         TilemapToArray();
 
         //初始化起点、终点和火车位置
+        start = startStation;
+        end = endStation;
 
         //起点TileMap坐标转世界坐标
         Vector3 startStationWorld = railMap.GetCellCenterWorld(new Vector3Int(startStation.x, startStation.y, 0));
@@ -109,6 +127,8 @@ public class GameManager : MonoBehaviour
         }
 
         //初始化道具信息
+        InitializeProps();
+
     }
 
     // Update is called once per frame
@@ -123,7 +143,11 @@ public class GameManager : MonoBehaviour
                 //测试用键盘事件监听
                 if (Input.GetKeyDown(KeyCode.R))
                 {
-                    player.Move();
+                    RunStep();
+                }
+                if (Input.GetKeyDown(KeyCode.T))
+                {
+                    RunFinish();
                 }
                 if (Input.GetKeyDown(KeyCode.B))
                 {
@@ -208,12 +232,47 @@ public class GameManager : MonoBehaviour
                     //Debug.Log(railArray[i, j] + ",position:" + railArray[i, j].tilePosition + ",direction:" + railArray[i, j].linkDirection1 + "," + railArray[i, j].linkDirection2);
                 }
                 //地形图层探测
-                if(groundMap.GetTile(cellPosition).name == "rock")
+                if(obstacleMap.HasTile(cellPosition) && obstacleMap.GetTile(cellPosition).name == "rock")
                 {
                     obstacleArray[i,j] = 2;
                 }
+                if(groundMap.HasTile(cellPosition) && groundMap.GetTile(cellPosition).name == "checkPoint")
+                {
+                    checkPointArray[i, j] = true;
+                    checkPoints++;
+                }
             }
         }
+    }
+
+    void InitializeProps()
+    {
+        //初始化矿工十字镐
+        GameObject[] pickaxeObjects = GameObject.FindGameObjectsWithTag("Pickaxe");
+        foreach(GameObject go in pickaxeObjects)
+        {
+            Vector3Int cellPosition = groundMap.WorldToCell(go.transform.position);
+            go.transform.position = groundMap.GetCellCenterWorld(cellPosition) + new Vector3(0, 0.25f, 0);
+            if(MapBoundTest(new Vector2Int(cellPosition.x, cellPosition.y)))
+            {
+                if (propArray[cellPosition.x, cellPosition.y] == null)
+                {
+                    propArray[cellPosition.x, cellPosition.y] = go;
+                }
+                else
+                {
+                    Debug.Log("道具摆放存在重叠！");
+                }
+            }
+            else
+            {
+                Debug.Log("地图道具摆放错误!");
+            }
+        }
+
+        //初始化高爆炸弹(看后续设置)
+
+        
     }
 
     Rail RailInitialize(int x, int y,string tileName)
@@ -363,16 +422,20 @@ public class GameManager : MonoBehaviour
         //更新鼠标位置
         Vector3 mouseScreenPos = Input.mousePosition;
         mousePos = mainCamera.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, mainCamera.nearClipPlane));
+        mainCamera.transparencySortAxis = new Vector3(0.49f, 2f, 0.49f);
     }
 
     void RunStep()
     {
         //运行一步
+        player.Move();
     }
 
     void RunFinish()
     {
         //连续运行
+        continuouslyMove = true;
+        player.Move();
     }
 
     void StopGame()
@@ -384,6 +447,19 @@ public class GameManager : MonoBehaviour
     {
         //重新加载游戏
     }
+
+    public static bool CheckWin()
+    {
+        if(checkPoints == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 
     public static bool MapBoundTest(Vector2Int cellPos)
     {
