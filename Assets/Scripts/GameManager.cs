@@ -26,10 +26,14 @@ public class GameManager : MonoBehaviour
     { 
         等待操作,
         播放动画,
-        放置铁轨
+        放置铁轨,
+        破坏方块
     };
     //游戏的当前操作状态
     public static States state;
+
+    //网格变化判定
+    bool cellChange = false;
 
     //铁轨放置预计算对象
     Rail previewRail;
@@ -46,6 +50,12 @@ public class GameManager : MonoBehaviour
     public static Tile rail_rightDown;
     public static Tile rail_leftUp;
     public static Tile rail_rightUp;
+
+    //矿工十字镐贴图
+    public static Tile highlight;
+
+    //地面贴图
+    public static Tile ground;
 
     //全局参数
     public int rails;
@@ -64,6 +74,8 @@ public class GameManager : MonoBehaviour
         rail_rightDown = Resources.Load<Tile>("Palettes/rail_rightDown");
         rail_leftUp = Resources.Load<Tile>("Palettes/rail_leftUp");
         rail_rightUp = Resources.Load<Tile>("Palettes/rail_rightUp");
+        highlight = Resources.Load<Tile>("Palettes/highlight");
+        ground = Resources.Load<Tile>("Palettes/ground");
 
         //初始化Tilemap
         railMap = GameObject.Find("Rail").GetComponent<Tilemap>();
@@ -113,6 +125,18 @@ public class GameManager : MonoBehaviour
                 {
                     player.Move();
                 }
+                if (Input.GetKeyDown(KeyCode.B))
+                {
+                    if (pickaxe <= 0)
+                    {
+                        Debug.Log("没有可用的矿工镐");
+                    }
+                    else
+                    {
+                        Debug.Log("剩余矿工镐数量:" + pickaxe);
+                        state = States.破坏方块;
+                    }
+                }
                 if (Input.GetKeyDown(KeyCode.P))
                 {
                     if(rails <= 0)
@@ -127,6 +151,7 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case States.放置铁轨:
+                CheckCellChange();
                 CheckRail();
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -134,6 +159,20 @@ public class GameManager : MonoBehaviour
                 }
                 if (Input.GetKeyDown(KeyCode.P))
                 {
+                    previewMap.SetTile(mouseCellPos, null);
+                    state = States.等待操作;
+                }
+                break;
+            case States.破坏方块:
+                CheckCellChange();
+                CheckBreak();
+                if (Input.GetMouseButtonDown(0))
+                {
+                    BreakCell();
+                }
+                if (Input.GetKeyDown(KeyCode.B))
+                {
+                    previewMap.SetTile(mouseCellPos, null);
                     state = States.等待操作;
                 }
                 break;
@@ -182,12 +221,11 @@ public class GameManager : MonoBehaviour
         return new Rail(new Vector2Int(x, y), tileName);
     }
 
-    void CheckRail()
+    void CheckCellChange()
     {
         //计算网格位置
         Vector3Int newMouseCellPos = railMap.WorldToCell(mousePos);
-        bool cellChange = false;
-        if(newMouseCellPos!= mouseCellPos)
+        if (newMouseCellPos != mouseCellPos)
         {
             //如果指向网格改变，修改状态位并删除上一格的预览信息
             cellChange = true;
@@ -195,7 +233,10 @@ public class GameManager : MonoBehaviour
             mouseCellPos = newMouseCellPos;
         }
         //Debug.Log(mousePos+","+mouseCellPos);
+    }
 
+    void CheckRail()
+    {
         //仅当指向网格坐标改变时预计算铁轨信息
         if (!cellChange)
             return;
@@ -212,6 +253,7 @@ public class GameManager : MonoBehaviour
                 previewMap.color = new Color(1, 0, 0, 0.5f);
                 previewMap.SetTile(mouseCellPos, rail_horizontal);
             }
+            cellChange = false;
         }
     }
 
@@ -219,25 +261,26 @@ public class GameManager : MonoBehaviour
     {
         if( rails>0 )
         {
-            if ( obstacleArray[mouseCellPos.x, mouseCellPos.y ] != 0)
+            if (MapBoundTest(new Vector2Int(mouseCellPos.x, mouseCellPos.y)))
             {
-                Debug.Log("不能将铁轨放置在障碍物上！");
-            }
-            else
-            {
-                rails--;
-                Debug.Log("放置成功，剩余铁轨数量：" + rails);
-                //if( rails==0 )
-                //{
-                //    state = States.等待操作;
-                //}
-
-                if (MapBoundTest(new Vector2Int(mouseCellPos.x, mouseCellPos.y)))
+                if ( obstacleArray[mouseCellPos.x, mouseCellPos.y ] != 0)
                 {
+                    Debug.Log("不能将铁轨放置在障碍物上！");
+                }
+                else
+                {
+                    rails--;
+                    Debug.Log("放置成功，剩余铁轨数量：" + rails);
+                    //if( rails==0 )
+                    //{
+                    //    state = States.等待操作;
+                    //}
+
                     //放置铁轨
                     previewRail.SetTile();
-                    //更新railArray
+                    //更新railArray和obstacleArray
                     railArray[mouseCellPos.x, mouseCellPos.y] = previewRail;
+                    obstacleArray[mouseCellPos.x, mouseCellPos.y] = 1;
                     //处理连接铁轨可能的转向问题
                     previewRail.LinkNeighbour();
                 }
@@ -249,18 +292,70 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void BreakRail()
+    void CheckBreak()
     {
-        //破坏铁轨
-
-        //更新railArray
+        if (!cellChange)
+            return;
+        if (MapBoundTest(new Vector2Int(mouseCellPos.x, mouseCellPos.y)))
+        {
+            if (obstacleArray[mouseCellPos.x, mouseCellPos.y] == 0 || player.GetPosition() == new Vector2Int(mouseCellPos.x, mouseCellPos.y))
+            {
+                previewMap.color = new Color(1, 0, 0, 0.5f);
+            }
+            else
+            {
+                previewMap.color = new Color(0, 1, 0, 0.5f);
+            }
+            previewMap.SetTile(mouseCellPos, highlight);
+            cellChange = false;
+        }
     }
 
-    void BreakBarrier()
+    void BreakCell()
     {
-        //破坏障碍物
+        if (pickaxe > 0)
+        {
+            if (MapBoundTest(new Vector2Int(mouseCellPos.x, mouseCellPos.y)))
+            {
+                if (player.GetPosition() == new Vector2Int(mouseCellPos.x, mouseCellPos.y))
+                {
+                    Debug.Log("不能破坏火车所在方块！");
+                }
+                else if (obstacleArray[mouseCellPos.x, mouseCellPos.y] == 0 || obstacleArray[mouseCellPos.x, mouseCellPos.y] == 3)
+                {
+                    Debug.Log("没有可以破坏的对象！");
+                }
+                else
+                {
+                    pickaxe--;
+                    Debug.Log("破坏成功，剩余矿工十字镐数量：" + pickaxe);
+                    //if( pickaxe==0 )
+                    //{
+                    //    state = States.等待操作;
+                    //}
 
-        //更新objectArray?
+                    previewMap.color = new Color(1, 0, 0, 0.5f);
+                    //更新railArray和obstacleArray
+                    if (obstacleArray[mouseCellPos.x, mouseCellPos.y] == 1)
+                    {
+                        //破坏铁轨
+                        railArray[mouseCellPos.x, mouseCellPos.y] = null;
+                        railMap.SetTile(mouseCellPos, null);
+                        rails++;
+                    }
+                    else
+                    {
+                        //破坏障碍物
+                        groundMap.SetTile(mouseCellPos, ground);
+                    }
+                    obstacleArray[mouseCellPos.x, mouseCellPos.y] = 0;
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("没有矿工十字镐可以使用！");
+        }
     }
 
     void UpdateMousePos()
@@ -268,7 +363,6 @@ public class GameManager : MonoBehaviour
         //更新鼠标位置
         Vector3 mouseScreenPos = Input.mousePosition;
         mousePos = mainCamera.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, mainCamera.nearClipPlane));
-
     }
 
     void RunStep()

@@ -267,8 +267,8 @@ public class Rail
             linkedRail2 = GameManager.railArray[detectPos2.x, detectPos2.y];
         }
 
-        //如果相邻铁轨1已经连接，什么也不做
-        if (linkedRail1 == null ||
+        //如果相邻铁轨1已经连接或火车位于该处，什么也不做
+        if (linkedRail1 == null || GameManager.player.GetPosition() == detectPos1 ||
             linkedRail1.GetLinkDirection1() == this.tilePosition - linkedRail1.tilePosition ||
             linkedRail1.GetLinkDirection2() == this.tilePosition - linkedRail1.tilePosition)
         {
@@ -302,8 +302,8 @@ public class Rail
             linkedRail1.SetTile();
         }
 
-        //如果相邻铁轨2已经连接，什么也不做
-        if (linkedRail2 == null || 
+        //如果相邻铁轨2已经连接或火车位于该处，什么也不做
+        if (linkedRail2 == null || GameManager.player.GetPosition() == detectPos2 ||
             linkedRail2.GetLinkDirection1() == this.tilePosition - linkedRail2.tilePosition ||
             linkedRail2.GetLinkDirection2() == this.tilePosition - linkedRail2.tilePosition)
         {
