@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 using static UnityEditor.PlayerSettings;
 
 public class Train : MonoBehaviour
@@ -60,6 +61,9 @@ public class Train : MonoBehaviour
 
     void MoveToCell(Rail nextRail)
     {
+        //播放期间禁用操作按钮
+        GameManager.BanButtons();
+
         //播放火车移动动画
         StartCoroutine(MoveCoroutine(position));
 
@@ -74,7 +78,7 @@ public class Train : MonoBehaviour
             if(detectGO.CompareTag("Pickaxe"))
             {
                 GameManager.pickaxe++;
-                Debug.Log("获得十字镐，剩余数量" + GameManager.pickaxe);
+                GameManager.UpdateUI();
                 Destroy(detectGO);
             }
         }
@@ -123,7 +127,8 @@ public class Train : MonoBehaviour
         // 移动完后执行炸弹判定
         foreach(Bomb b in GameManager.bombList)
         {
-            b.MinusTime();
+            if(b.exist)
+                b.MinusTime();
         }
 
         if(GameManager.continuouslyMove)
@@ -132,11 +137,13 @@ public class Train : MonoBehaviour
             {
                 GameManager.continuouslyMove = false;
                 GameManager.state = GameManager.States.等待操作;
+                GameManager.ActiveButtons();
             }
         }
         else
         {
             GameManager.state = GameManager.States.等待操作;
+            GameManager.ActiveButtons();
         }
     }
 

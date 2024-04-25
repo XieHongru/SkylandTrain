@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
@@ -69,7 +70,8 @@ public class GameManager : MonoBehaviour
 
     //全局参数
     public static int checkPoints;
-    public int rails;
+    public int init_rails;
+    public static int rails;
     public int init_pickaxe;
     public static int pickaxe;
 
@@ -96,7 +98,9 @@ public class GameManager : MonoBehaviour
         previewMap = GameObject.Find("Preview").GetComponent<Tilemap>();
         obstacleMap = GameObject.Find("Obstacle").GetComponent<Tilemap>();
 
+        //参数初始化
         continuouslyMove = false;
+        rails = init_rails;
         pickaxe = init_pickaxe;
         checkPoints = 0;
 
@@ -161,7 +165,6 @@ public class GameManager : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("剩余矿工镐数量:" + pickaxe);
                         state = States.破坏方块;
                     }
                 }
@@ -173,7 +176,6 @@ public class GameManager : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("当前可放置的铁轨数量:" + rails);
                         state = States.放置铁轨;
                     }
                 }
@@ -186,7 +188,7 @@ public class GameManager : MonoBehaviour
                     SetRail();
                     UpdateUI();
                 }
-                if (Input.GetKeyDown(KeyCode.P))
+                if (Input.GetKeyDown(KeyCode.P) || Input.GetMouseButtonDown(1))
                 {
                     previewMap.SetTile(mouseCellPos, null);
                     state = States.等待操作;
@@ -200,7 +202,7 @@ public class GameManager : MonoBehaviour
                     BreakCell();
                     UpdateUI();
                 }
-                if (Input.GetKeyDown(KeyCode.B))
+                if (Input.GetKeyDown(KeyCode.B) || Input.GetMouseButtonDown(1))
                 {
                     previewMap.SetTile(mouseCellPos, null);
                     state = States.等待操作;
@@ -289,6 +291,9 @@ public class GameManager : MonoBehaviour
                     propArray[cellPosition.x, cellPosition.y] = go;
                     Bomb newBomb = go.GetComponent<Bomb>();
                     newBomb.SetPosition(new Vector2Int(cellPosition.x, cellPosition.y));
+                    Transform textMesh = newBomb.transform.GetChild(0).GetChild(0);
+                    Debug.Log(textMesh);
+                    textMesh.GetComponent<TextMeshProUGUI>().text = newBomb.timer.ToString();
                     bombList.Add(newBomb);
                 }
                 else
@@ -306,13 +311,34 @@ public class GameManager : MonoBehaviour
 
     void InitializeUI()
     {
-        GameObject.Find("RailCountText").GetComponent<Text>().text = "铁轨数量：" + rails;
-
+        GameObject.Find("RailCountText").GetComponent<Text>().text = "放置铁轨  " + rails;
+        GameObject.Find("PickaxeCountText").GetComponent<Text>().text = "使用十字镐  " + pickaxe;
+        if (pickaxe == 0)
+        {
+            GameObject.Find("PickaxeButton").GetComponent<Button>().interactable = false;
+        }
     }
 
-    void UpdateUI()
+    public static void UpdateUI()
     {
-        GameObject.Find("RailCountText").GetComponent<Text>().text = "铁轨数量：" + rails;
+        GameObject.Find("RailCountText").GetComponent<Text>().text = "放置铁轨  " + rails;
+        GameObject.Find("PickaxeCountText").GetComponent<Text>().text = "使用十字镐  " + pickaxe;
+        if (rails == 0)
+        {
+            GameObject.Find("RailButton").GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            GameObject.Find("RailButton").GetComponent<Button>().interactable = true;
+        }
+        if (pickaxe == 0)
+        {
+            GameObject.Find("PickaxeButton").GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            GameObject.Find("PickaxeButton").GetComponent<Button>().interactable = true;
+        }
     }
 
     Rail RailInitialize(int x, int y,string tileName)
@@ -358,9 +384,10 @@ public class GameManager : MonoBehaviour
 
     void SetRail()
     {
-        if( rails>0 )
+        
+        if (MapBoundTest(new Vector2Int(mouseCellPos.x, mouseCellPos.y)))
         {
-            if (MapBoundTest(new Vector2Int(mouseCellPos.x, mouseCellPos.y)))
+            if (rails > 0)
             {
                 if ( obstacleArray[mouseCellPos.x, mouseCellPos.y ] != 0)
                 {
@@ -383,10 +410,10 @@ public class GameManager : MonoBehaviour
                     previewRail.LinkNeighbour();
                 }
             }
-        }
-        else
-        {
-            Debug.Log("没有可放置的铁轨！");
+            else
+            {
+                Debug.Log("没有可放置的铁轨！");
+            }
         }
     }
 
@@ -411,9 +438,9 @@ public class GameManager : MonoBehaviour
 
     void BreakCell()
     {
-        if (pickaxe > 0)
+        if (MapBoundTest(new Vector2Int(mouseCellPos.x, mouseCellPos.y)))
         {
-            if (MapBoundTest(new Vector2Int(mouseCellPos.x, mouseCellPos.y)))
+            if (pickaxe > 0)
             {
                 if (player.GetPosition() == new Vector2Int(mouseCellPos.x, mouseCellPos.y))
                 {
@@ -426,11 +453,6 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     pickaxe--;
-                    Debug.Log("破坏成功，剩余矿工十字镐数量：" + pickaxe);
-                    //if( pickaxe==0 )
-                    //{
-                    //    state = States.等待操作;
-                    //}
 
                     previewMap.color = new Color(1, 0, 0, 0.5f);
                     //更新railArray和obstacleArray
@@ -443,15 +465,15 @@ public class GameManager : MonoBehaviour
                     else
                     {
                         //破坏障碍物
-                        groundMap.SetTile(mouseCellPos, ground);
+                        obstacleMap.SetTile(mouseCellPos, null);
                     }
                     obstacleArray[mouseCellPos.x, mouseCellPos.y] = 0;
                 }
             }
-        }
-        else
-        {
-            Debug.Log("没有矿工十字镐可以使用！");
+            else
+            {
+                Debug.Log("没有矿工十字镐可以使用！");
+            }
         }
     }
 
@@ -463,13 +485,14 @@ public class GameManager : MonoBehaviour
         mainCamera.transparencySortAxis = new Vector3(0.49f, 2f, 0.49f);
     }
 
-    void RunStep()
+    public void RunStep()
     {
         //运行一步
         player.Move();
+        UpdateUI();
     }
 
-    void RunFinish()
+    public void RunFinish()
     {
         //连续运行
         continuouslyMove = true;
@@ -484,6 +507,27 @@ public class GameManager : MonoBehaviour
     void Restart()
     {
         //重新加载游戏
+    }
+
+    //火车移动时，应禁用操作按钮
+    public static void BanButtons()
+    {
+        GameObject.Find("RunStep").GetComponent<Button>().interactable = false;
+        GameObject.Find("Run").GetComponent<Button>().interactable = false;
+        GameObject.Find("RailButton").GetComponent<Button>().interactable = false;
+        GameObject.Find("PickaxeButton").GetComponent<Button>().interactable = false;
+    }
+
+    //启用按钮
+    public static void ActiveButtons()
+    {
+        GameObject.Find("RunStep").GetComponent<Button>().interactable = true;
+        GameObject.Find("Run").GetComponent<Button>().interactable = true;
+        //使用道具的按钮需要先判定剩余数量
+        if(rails > 0)
+            GameObject.Find("RailButton").GetComponent<Button>().interactable = true;
+        if(pickaxe > 0)
+            GameObject.Find("PickaxeButton").GetComponent<Button>().interactable = true;
     }
 
     public static bool CheckWin()

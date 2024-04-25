@@ -49,12 +49,12 @@ TagManager:
   - name: Rail
     uniqueID: 2772767069
     locked: 0
-  - name: Preview
-    uniqueID: 1740213787
-    locked: 0
   - name: Prop
     uniqueID: 1902803941
     locked: 0
   - name: Player and Obstacle
     uniqueID: 1548363011
+    locked: 0
+  - name: Preview
+    uniqueID: 1740213787
     locked: 0
