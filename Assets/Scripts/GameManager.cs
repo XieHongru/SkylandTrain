@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
     public static int[,] obstacleArray = new int[8,8]; 
     //道具表
     public static GameObject[,] propArray = new GameObject[8,8];
+    public static ArrayList bombList = new ArrayList();
     //检查点表
     public static bool[,] checkPointArray = new bool[8,8];
     public static Camera mainCamera;
@@ -129,6 +131,8 @@ public class GameManager : MonoBehaviour
         //初始化道具信息
         InitializeProps();
 
+        //初始化UI
+        InitializeUI();
     }
 
     // Update is called once per frame
@@ -180,6 +184,7 @@ public class GameManager : MonoBehaviour
                 if (Input.GetMouseButtonDown(0))
                 {
                     SetRail();
+                    UpdateUI();
                 }
                 if (Input.GetKeyDown(KeyCode.P))
                 {
@@ -193,6 +198,7 @@ public class GameManager : MonoBehaviour
                 if (Input.GetMouseButtonDown(0))
                 {
                     BreakCell();
+                    UpdateUI();
                 }
                 if (Input.GetKeyDown(KeyCode.B))
                 {
@@ -271,8 +277,42 @@ public class GameManager : MonoBehaviour
         }
 
         //初始化高爆炸弹(看后续设置)
+        GameObject[] bombObjects = GameObject.FindGameObjectsWithTag("Bomb");
+        foreach (GameObject go in bombObjects)
+        {
+            Vector3Int cellPosition = groundMap.WorldToCell(go.transform.position);
+            go.transform.position = groundMap.GetCellCenterWorld(cellPosition) + new Vector3(0, 0.25f, 0);
+            if (MapBoundTest(new Vector2Int(cellPosition.x, cellPosition.y)))
+            {
+                if (propArray[cellPosition.x, cellPosition.y] == null)
+                {
+                    propArray[cellPosition.x, cellPosition.y] = go;
+                    Bomb newBomb = go.GetComponent<Bomb>();
+                    newBomb.SetPosition(new Vector2Int(cellPosition.x, cellPosition.y));
+                    bombList.Add(newBomb);
+                }
+                else
+                {
+                    Debug.Log("道具摆放存在重叠！");
+                }
+            }
+            else
+            {
+                Debug.Log("地图道具摆放错误!");
+            }
+        }
 
-        
+    }
+
+    void InitializeUI()
+    {
+        GameObject.Find("RailCountText").GetComponent<Text>().text = "铁轨数量：" + rails;
+
+    }
+
+    void UpdateUI()
+    {
+        GameObject.Find("RailCountText").GetComponent<Text>().text = "铁轨数量：" + rails;
     }
 
     Rail RailInitialize(int x, int y,string tileName)
@@ -329,7 +369,6 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     rails--;
-                    Debug.Log("放置成功，剩余铁轨数量：" + rails);
                     //if( rails==0 )
                     //{
                     //    state = States.等待操作;
@@ -400,7 +439,6 @@ public class GameManager : MonoBehaviour
                         //破坏铁轨
                         railArray[mouseCellPos.x, mouseCellPos.y] = null;
                         railMap.SetTile(mouseCellPos, null);
-                        rails++;
                     }
                     else
                     {

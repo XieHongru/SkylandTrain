@@ -119,6 +119,12 @@ public class Train : MonoBehaviour
 
         // 确保移动到目标位置
         transform.position = endPosition;
+        
+        // 移动完后执行炸弹判定
+        foreach(Bomb b in GameManager.bombList)
+        {
+            b.MinusTime();
+        }
 
         if(GameManager.continuouslyMove)
         {
