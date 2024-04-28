@@ -17,14 +17,14 @@ public class GameManager : MonoBehaviour
     public static Vector2Int end;
 
     public static Train player;
-    public static Rail[,] railArray = new Rail[8,8];
+    public static Rail[,] railArray;
     //障碍物表，0表示空地，1表示铁轨，2表示山，3表示湖
-    public static int[,] obstacleArray = new int[8,8]; 
+    public static int[,] obstacleArray; 
     //道具表
-    public static GameObject[,] propArray = new GameObject[8,8];
-    public static ArrayList bombList = new ArrayList();
+    public static GameObject[,] propArray;
+    public static ArrayList bombList;
     //检查点表
-    public static bool[,] checkPointArray = new bool[8,8];
+    public static bool[,] checkPointArray;
     public static Camera mainCamera;
 
     //记录鼠标坐标
@@ -82,7 +82,14 @@ public class GameManager : MonoBehaviour
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         mainCamera.transparencySortAxis = new Vector3(0.49f, 2f, 0.49f);
 
-        //初始化贴图
+        //初始化Array
+        railArray = new Rail[8, 8];
+        obstacleArray = new int[8, 8];
+        propArray = new GameObject[8, 8];
+        bombList = new ArrayList();
+        checkPointArray = new bool[8, 8];
+
+    //初始化贴图
         rail_horizontal = Resources.Load<Tile>("Palettes/rail_horizontal");
         rail_vertical = Resources.Load<Tile>("Palettes/rail_vertical");
         rail_leftDown = Resources.Load<Tile>("Palettes/rail_leftDown");
