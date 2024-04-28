@@ -13,7 +13,7 @@ public class Bomb : MonoBehaviour
     Vector2Int position;
 
     Vector2Int[] directions = { new Vector2Int(-1, -1), new Vector2Int(-1, 1), new Vector2Int(1, -1), new Vector2Int(1, 1),
-                                Vector2Int.left, Vector2Int.right, Vector2Int.up, Vector2Int.down };
+                                Vector2Int.left, Vector2Int.right, Vector2Int.up, Vector2Int.down, Vector2Int.zero };
 
     public void MinusTime()
     {
