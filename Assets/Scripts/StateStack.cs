@@ -22,9 +22,10 @@ public class StateStack<T>
 
     public T Pop()
     {
-        if (stack[top] != null)
+        if (stack[top] != null && top != bottom)
         {
             T ret = stack[top];
+            stack[top] = default(T);
             --top;
             if(top<0)
             {

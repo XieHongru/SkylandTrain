@@ -483,12 +483,22 @@ public class GameManager : MonoBehaviour
                     //更新railArray和obstacleArray
                     if (obstacleArray[mouseCellPos.x, mouseCellPos.y] == 1)
                     {
+                        //破坏前记录当前状态
+                        GameState gameState = new GameState(GameState.ActionType.Break, new Vector2Int(mouseCellPos.x, mouseCellPos.y), 
+                                                            railArray[mouseCellPos.x, mouseCellPos.y], "");
+                        stateStack.Push(gameState);
+
                         //破坏铁轨
                         railArray[mouseCellPos.x, mouseCellPos.y] = null;
                         railMap.SetTile(mouseCellPos, null);
                     }
                     else
                     {
+                        //破坏前记录当前状态
+                        GameState gameState = new GameState(GameState.ActionType.Break, new Vector2Int(mouseCellPos.x, mouseCellPos.y), null, 
+                                                            obstacleMap.GetTile(mouseCellPos).name);
+                        stateStack.Push(gameState);
+
                         //破坏障碍物
                         obstacleMap.SetTile(mouseCellPos, null);
                     }
