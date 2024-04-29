@@ -33,4 +33,13 @@ public class UIController : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void Undo()
+    {
+        GameState state = GameManager.stateStack.Pop();
+        if(state != null )
+        {
+            state.Undo();
+        }
+    }
 }

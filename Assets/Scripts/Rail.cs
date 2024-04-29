@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -5,13 +6,11 @@ using UnityEditor.MemoryProfiler;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class Rail
+public class Rail : ICloneable
 {
-    bool isValid;
-
     static Vector2Int[] directions = { Vector2Int.left, Vector2Int.right, Vector2Int.up, Vector2Int.down };
 
-    Tile tile;
+    public Tile tile;
     Vector2Int tilePosition;
     Vector2Int linkDirection1;
     Vector2Int linkDirection2;
@@ -30,6 +29,13 @@ public class Rail
     public Rail()
     {
 
+    }
+
+    public object Clone()
+    {
+        Rail obj = (Rail)MemberwiseClone();
+        obj.tile = tile;
+        return obj;
     }
 
     public void PreCalculate()
@@ -345,31 +351,42 @@ public class Rail
             case "rail_horizontal":
                 linkDirection1 = Vector2Int.left;
                 linkDirection2 = Vector2Int.right;
+                tile = GameManager.rail_horizontal;
                 break;
             case "rail_vertical":
                 linkDirection1 = Vector2Int.down;
                 linkDirection2 = Vector2Int.up;
+                tile = GameManager.rail_vertical;
                 break;
             case "rail_leftDown":
                 linkDirection1 = Vector2Int.left;
                 linkDirection2 = Vector2Int.down;
+                tile = GameManager.rail_leftDown;
                 break;
             case "rail_leftUp":
                 linkDirection1 = Vector2Int.left;
                 linkDirection2 = Vector2Int.up;
+                tile = GameManager.rail_leftUp;
                 break;
             case "rail_rightDown":
                 linkDirection1 = Vector2Int.right;
                 linkDirection2 = Vector2Int.down;
+                tile = GameManager.rail_rightDown;
                 break;
             case "rail_rightUp":
                 linkDirection1 = Vector2Int.right;
                 linkDirection2 = Vector2Int.up;
+                tile = GameManager.rail_rightUp;
                 break;
             default:
                 Debug.Log("False Sprite!");
                 break;
         }
+    }
+
+    public Vector2Int GetPosition()
+    {
+        return tilePosition;
     }
 
     public Vector2Int GetLinkDirection1()

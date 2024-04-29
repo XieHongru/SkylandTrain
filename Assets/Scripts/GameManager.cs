@@ -31,6 +31,9 @@ public class GameManager : MonoBehaviour
     Vector2 mousePos;
     Vector3Int mouseCellPos;
 
+    //状态栈
+    public static StateStack<GameState> stateStack;
+
     public enum States
     { 
         等待操作,
@@ -82,6 +85,9 @@ public class GameManager : MonoBehaviour
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         mainCamera.transparencySortAxis = new Vector3(0.49f, 2f, 0.49f);
 
+        //初始化状态栈
+        stateStack = new StateStack<GameState>(10);
+
         //初始化Array
         railArray = new Rail[8, 8];
         obstacleArray = new int[8, 8];
@@ -89,7 +95,7 @@ public class GameManager : MonoBehaviour
         bombList = new ArrayList();
         checkPointArray = new bool[8, 8];
 
-    //初始化贴图
+        //初始化贴图
         rail_horizontal = Resources.Load<Tile>("Palettes/rail_horizontal");
         rail_vertical = Resources.Load<Tile>("Palettes/rail_vertical");
         rail_leftDown = Resources.Load<Tile>("Palettes/rail_leftDown");
@@ -299,7 +305,6 @@ public class GameManager : MonoBehaviour
                     Bomb newBomb = go.GetComponent<Bomb>();
                     newBomb.SetPosition(new Vector2Int(cellPosition.x, cellPosition.y));
                     Transform textMesh = newBomb.transform.GetChild(0).GetChild(0);
-                    Debug.Log(textMesh);
                     textMesh.GetComponent<TextMeshProUGUI>().text = newBomb.timer.ToString();
                     bombList.Add(newBomb);
                 }
@@ -402,6 +407,19 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
+                    //先对当前状态压栈
+                    Rail link1 = null;
+                    Rail link2 = null;
+                    Vector2Int linkDir1 = new Vector2Int(mouseCellPos.x, mouseCellPos.y) + previewRail.GetLinkDirection1();
+                    Vector2Int linkDir2 = new Vector2Int(mouseCellPos.x, mouseCellPos.y) + previewRail.GetLinkDirection2();
+                    if(MapBoundTest(linkDir1))
+                        link1 = railArray[linkDir1.x, linkDir1.y];
+                    if(MapBoundTest(linkDir2))
+                        link2 = railArray[linkDir2.x, linkDir2.y];
+                    GameState gameState = new GameState(GameState.ActionType.SetRail, new Vector2Int(mouseCellPos.x, mouseCellPos.y), link1, link2);
+                    stateStack.Push(gameState);
+
+                    //更新
                     rails--;
                     //if( rails==0 )
                     //{
