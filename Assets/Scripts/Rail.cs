@@ -282,17 +282,22 @@ public class Rail : ICloneable
         }
         else
         {
-            //查找相邻铁轨1的连接方向2上是否有铁轨，如果有，则将其连接方向1与新铁轨相连
-            Vector2Int subDetectPos = detectPos1 + linkedRail1.GetLinkDirection2();
-            if (subDetectPos.x >= 0 && subDetectPos.x < 8 && subDetectPos.y >= 0 && subDetectPos.y < 8 &&
-                GameManager.railArray[subDetectPos.x, subDetectPos.y] != null)
+            //查找相邻铁轨1的连接方向1上是否有铁轨
+            Vector2Int subDetectPos1 = detectPos1 + linkedRail1.GetLinkDirection1();
+            Vector2Int subDetectPos2 = detectPos1 + linkedRail1.GetLinkDirection2();
+            if (GameManager.MapBoundTest(subDetectPos1) && GameManager.railArray[subDetectPos1.x, subDetectPos1.y] != null)
             {
-                linkedRail1.SetLinkDirection1(this.tilePosition - linkedRail1.tilePosition);
+                //如果有，则查找相邻铁轨1的连接方向2上是否有铁轨
+                if (!GameManager.MapBoundTest(subDetectPos2) || GameManager.railArray[subDetectPos2.x, subDetectPos2.y] == null)
+                {
+                    //如果方向2上没有铁轨则连接，否则跳过处理该相邻铁轨
+                    linkedRail1.SetLinkDirection2(this.tilePosition - linkedRail1.tilePosition);
+                }
             }
             else
             {
-                //如果没有，则将其连接方向2与新铁轨相连
-                linkedRail1.SetLinkDirection2(this.tilePosition - linkedRail1.tilePosition);
+                //如果没有，则将其连接方向1与新铁轨相连
+                linkedRail1.SetLinkDirection1(this.tilePosition - linkedRail1.tilePosition);
             }
 
             //计算改变后铁轨贴图
@@ -317,17 +322,22 @@ public class Rail : ICloneable
         }
         else
         {
-            //查找相邻铁轨2的连接方向2上是否有铁轨，如果有，则将其连接方向1与新铁轨相连
-            Vector2Int subDetectPos = detectPos2 + linkedRail2.GetLinkDirection2();
-            if (GameManager.MapBoundTest(subDetectPos) &&
-                GameManager.railArray[subDetectPos.x, subDetectPos.y] != null)
+            Vector2Int subDetectPos1 = detectPos2 + linkedRail2.GetLinkDirection1();
+            Vector2Int subDetectPos2 = detectPos2 + linkedRail2.GetLinkDirection2();
+            //查找相邻铁轨2的连接方向1上是否有铁轨
+            if (GameManager.MapBoundTest(subDetectPos1) && GameManager.railArray[subDetectPos1.x, subDetectPos1.y] != null)
             {
-                linkedRail2.SetLinkDirection1(this.tilePosition - linkedRail2.tilePosition);
+                //如果有，则查找相邻铁轨2的连接方向2上是否有铁轨
+                if (!GameManager.MapBoundTest(subDetectPos2) || GameManager.railArray[subDetectPos2.x, subDetectPos2.y] == null)
+                {
+                    //如果方向2上没有铁轨则连接，否则跳过处理该相邻铁轨
+                    linkedRail2.SetLinkDirection2(this.tilePosition - linkedRail2.tilePosition);
+                }
             }
             else
             {
-                //如果没有，则将其连接方向2与新铁轨相连
-                linkedRail2.SetLinkDirection2(this.tilePosition - linkedRail2.tilePosition);
+                //如果没有，则将其连接方向1与新铁轨相连
+                linkedRail2.SetLinkDirection1(this.tilePosition - linkedRail2.tilePosition);
             }
 
             //计算改变后铁轨贴图
