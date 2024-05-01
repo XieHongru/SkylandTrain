@@ -58,9 +58,12 @@ public class Bomb : MonoBehaviour
             if (GameManager.MapBoundTest(detectPos))
             {
                 GameManager.railArray[detectPos.x, detectPos.y] = null;
-                GameManager.obstacleArray[detectPos.x, detectPos.y] = 0;
+                if (GameManager.obstacleArray[detectPos.x, detectPos.y] != 3)
+                {
+                    GameManager.obstacleArray[detectPos.x, detectPos.y] = 0;
+                    GameManager.obstacleMap.SetTile(new Vector3Int(detectPos.x, detectPos.y, 0), null);
+                }
                 GameManager.railMap.SetTile(new Vector3Int(detectPos.x, detectPos.y, 0), null);
-                GameManager.obstacleMap.SetTile(new Vector3Int(detectPos.x, detectPos.y, 0), null);
                 if(GameManager.player.GetPosition() == detectPos)
                 {
                     flag = true;

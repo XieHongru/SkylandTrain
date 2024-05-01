@@ -286,10 +286,17 @@ public class GameManager : MonoBehaviour
                 {
                     obstacleArray[i,j] = 2;
                 }
-                if(groundMap.HasTile(cellPosition) && groundMap.GetTile(cellPosition).name == "checkPoint")
+                if(groundMap.HasTile(cellPosition))
                 {
-                    checkPointArray[i, j] = true;
-                    checkPoints++;
+                    if(groundMap.GetTile(cellPosition).name == "checkPoint")
+                    {
+                        checkPointArray[i, j] = true;
+                        checkPoints++;
+                    }
+                    else if(groundMap.GetTile(cellPosition).name == "pool")
+                    {
+                        obstacleArray[i, j] = 3;
+                    }
                 }
             }
         }
@@ -475,7 +482,7 @@ public class GameManager : MonoBehaviour
             return;
         if (MapBoundTest(new Vector2Int(mouseCellPos.x, mouseCellPos.y)))
         {
-            if (obstacleArray[mouseCellPos.x, mouseCellPos.y] == 0 || player.GetPosition() == new Vector2Int(mouseCellPos.x, mouseCellPos.y))
+            if (obstacleArray[mouseCellPos.x, mouseCellPos.y] == 0 || obstacleArray[mouseCellPos.x, mouseCellPos.y] == 3 || player.GetPosition() == new Vector2Int(mouseCellPos.x, mouseCellPos.y))
             {
                 previewMap.color = new Color(1, 0, 0, 0.5f);
             }
