@@ -61,6 +61,8 @@ public class Train : MonoBehaviour
 
     void MoveToCell(Rail nextRail)
     {
+        GameManager.round++;
+
         //播放期间禁用操作按钮
         GameManager.BanButtons();
 
@@ -77,16 +79,26 @@ public class Train : MonoBehaviour
             //十字镐
             if(detectGO.CompareTag("Pickaxe"))
             {
+                GameManager.state_pickaxe = true;
+                GameObject pickaxe_clone = Instantiate(detectGO, detectGO.transform.position, Quaternion.identity);
+                pickaxe_clone.SetActive(false);
+                GameManager.state_objects.Add(pickaxe_clone);
+
                 GameManager.pickaxe++;
                 GameManager.UpdateUI();
+                GameManager.propArray[position.x, position.y] = null;
                 Destroy(detectGO);
             }
         }
         //判断是否经过检查点
         if (GameManager.checkPointArray[position.x, position.y])
         {
+            GameManager.state_checkpoint = true;
+            GameManager.state_checkPoints.Add(position);
+
             GameManager.checkPointArray[position.x, position.y] = false;
             GameManager.checkPoints--;
+            GameManager.groundMap.SetTile(new Vector3Int(position.x, position.y, 0), GameManager.checkPoint_false);
             Debug.Log("经过检查点！");
         }
 
@@ -135,6 +147,12 @@ public class Train : MonoBehaviour
         {
             if(!Move())
             {
+                GameState gameState = new GameState(GameState.ActionType.Move, GameManager.state_playerPos, GameManager.state_playerForward,
+                                                    GameManager.state_bomb, GameManager.state_pickaxe, GameManager.state_checkpoint,
+                                                    GameManager.state_objects, GameManager.state_checkPoints, GameManager.state_round,
+                                                    GameManager.state_railArray, GameManager.state_obstacleArray);
+                GameManager.stateStack.Push(gameState);
+
                 GameManager.continuouslyMove = false;
                 GameManager.state = GameManager.States.等待操作;
                 GameManager.ActiveButtons();
@@ -142,6 +160,12 @@ public class Train : MonoBehaviour
         }
         else
         {
+            GameState gameState = new GameState(GameState.ActionType.Move, GameManager.state_playerPos, GameManager.state_playerForward,
+                                                GameManager.state_bomb, GameManager.state_pickaxe, GameManager.state_checkpoint,
+                                                GameManager.state_objects, GameManager.state_checkPoints, GameManager.state_round,
+                                                GameManager.state_railArray, GameManager.state_obstacleArray);
+            GameManager.stateStack.Push(gameState);
+
             GameManager.state = GameManager.States.等待操作;
             GameManager.ActiveButtons();
         }
@@ -166,6 +190,11 @@ public class Train : MonoBehaviour
     public void SetPosition(Vector2Int position)
     {
         this.position = position;
+    }
+
+    public Vector2Int GetForwardPosition()
+    {
+        return forwardDirection;
     }
 
     public void SetForwardDirection(Vector2Int direction)

@@ -1,8 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
+using static Unity.IO.LowLevel.Unsafe.AsyncReadManagerMetrics;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class GameState
 {
@@ -13,14 +17,21 @@ public class GameState
         Break
     }
 
+    Vector2Int[] directions = { new Vector2Int(-1, -1), new Vector2Int(-1, 1), new Vector2Int(1, -1), new Vector2Int(1, 1),
+                                Vector2Int.left, Vector2Int.right, Vector2Int.up, Vector2Int.down, Vector2Int.zero };
+
     ActionType actionType;
 
+    int round;
+
+    //记录火车移动前参数
     Vector2Int playerPos;
+    Vector2Int playerForward;
     Rail[,] railArray;
     int[,] obstacleArray;
     GameObject[,] propArray;
-    ArrayList bombList;
-    bool[,] checkPointArray;
+    List<Vector2Int> checkPoints = new List<Vector2Int>();
+    List<Vector2Int> propPos = new List<Vector2Int>();
 
     //记录放置铁轨的坐标和连接的两节铁轨
     Vector2Int setPos;
@@ -31,23 +42,65 @@ public class GameState
     Rail breakRail = null;
     Tile breakObstacle = null;
 
-    //构造移动的状态对象
-    public GameState(ActionType actionType, bool exploded, ArrayList bombs)
+    //构造移动的状态对象，要求objects传的数据即为拷贝
+    public GameState(ActionType actionType, Vector2Int playerPos, Vector2Int playerForward,
+                        bool bomb, bool pickaxe, bool checkpoint, List<GameObject> objects, List<Vector2Int> checkPoints, int round,
+                        Rail[,] railArray, int[,] obstacleArray)
     {
         this.actionType = actionType;
         if(actionType == ActionType.Move)
         {
-            //如果没有触发任何事件，只记录火车移动前的位置
-            playerPos = GameManager.player.GetPosition();
-            //如果会触发爆炸，存储地图信息和
-            if(exploded)
+            //如果没有触发任何事件，只记录火车移动前的位置和朝向
+            this.playerPos = playerPos;
+            this.playerForward = playerForward;
+            this.round = round;
+
+            this.railArray = railArray;
+            this.obstacleArray = obstacleArray;
+            propArray = new GameObject[8, 8];
+            //如果会触发爆炸
+            if (bomb)
             {
-                railArray = new Rail[8,8];
-                obstacleArray = new int[8,8];
-                bombList = bombs;
-                GameManager.railArray.CopyTo(railArray, 0);
-                GameManager.obstacleArray.CopyTo(obstacleArray, 0);
-                
+                foreach (GameObject obj in objects)
+                {
+                    if (obj.CompareTag("Bomb"))
+                    {
+                        Vector2Int tilePos = obj.GetComponent<Bomb>().GetPosition();
+                        propArray[tilePos.x, tilePos.y] = obj;
+                        propPos.Add(tilePos);
+
+                        //foreach (Vector2Int v in directions)
+                        //{
+
+                        //    Vector2Int visitPos = tilePos + v;
+
+                        //    if (GameManager.MapBoundTest(visitPos))
+                        //    {
+                        //        if (GameManager.railArray[visitPos.x, visitPos.y] != null)
+                        //            railArray[visitPos.x, visitPos.y] = (Rail)GameManager.railArray[visitPos.x, visitPos.y].Clone();
+                        //        obstacleArray[visitPos.x, visitPos.y] = GameManager.obstacleArray[visitPos.x, visitPos.y];
+                        //    }
+                        //}
+                    }
+                }
+            }
+            //如果获得十字镐
+            if(pickaxe)
+            {
+                foreach(GameObject obj in objects)
+                {
+                    if(obj.CompareTag("Pickaxe"))
+                    {
+                        Vector3Int tilePos = GameManager.groundMap.WorldToCell(obj.transform.position - new Vector3(0, 0.25f, 0));
+                        propArray[tilePos.x, tilePos.y] = obj;
+                        propPos.Add(new Vector2Int(tilePos.x, tilePos.y));
+                    }
+                }
+            }
+            //如果经过检查点
+            if(checkpoint)
+            {
+                this.checkPoints = checkPoints;
             }
         }
     }
@@ -86,6 +139,83 @@ public class GameState
 
     public void Undo()
     {
+        if(actionType == ActionType.Move)
+        {
+            //恢复火车位置和方向
+            GameManager.player.SetPosition(playerPos);
+            GameManager.player.SetForwardDirection(playerForward);
+            Animator animator = GameManager.player.GetComponent<Animator>();
+            animator.SetFloat("DirectionX", playerForward.x);
+            animator.SetFloat("DirectionY", playerForward.y);
+            Vector3 worldPos = GameManager.groundMap.GetCellCenterWorld(new Vector3Int(playerPos.x, playerPos.y, 0));
+            worldPos.y += 0.25f;
+            GameManager.player.transform.position = worldPos;
+            GameManager.round = round;
+
+            //处理道具
+            if(propPos.Count > 0)
+            {
+                foreach(Vector2Int v in propPos)
+                {
+                    if (propArray[v.x, v.y].CompareTag("Pickaxe"))
+                    {
+                        GameManager.pickaxe--;
+                        GameManager.UpdateUI();
+                        GameManager.propArray[v.x, v.y] = propArray[v.x, v.y];
+                        propArray[v.x, v.y].SetActive(true);
+                    }
+                    else if (propArray[v.x, v.y].CompareTag("Bomb"))
+                    {
+                        Bomb bomb = propArray[v.x, v.y].GetComponent<Bomb>();
+
+                        for (int i = 0; i < directions.Length; i++)
+                        {
+                            Vector2Int detectPos = v + directions[i];
+                            if (GameManager.MapBoundTest(detectPos))
+                            {
+                                //如果炸掉的是铁轨
+                                if (obstacleArray[detectPos.x, detectPos.y] == 1)
+                                {
+                                    GameManager.railArray[detectPos.x, detectPos.y] = railArray[detectPos.x, detectPos.y];
+                                    GameManager.obstacleArray[detectPos.x, detectPos.y] = 1;
+                                    GameManager.railArray[detectPos.x, detectPos.y].SetTile();
+                                }
+                                //如果炸掉的是障碍物
+                                else if (obstacleArray[detectPos.x, detectPos.y] == 2)
+                                {
+                                    GameManager.obstacleArray[detectPos.x, detectPos.y] = 2;
+                                    GameManager.obstacleMap.SetTile(new Vector3Int(detectPos.x, detectPos.y, 0), GameManager.rock);
+                                }
+                            }
+                        }
+
+                        bomb.exist = true;
+
+                        GameManager.propArray[v.x, v.y] = propArray[v.x, v.y];
+                        propArray[v.x, v.y].SetActive(true);
+                    }
+                }
+            }
+
+            //处理检查点
+            if(checkPoints.Count > 0)
+            {
+                foreach(Vector2Int v in checkPoints)
+                {
+                    GameManager.checkPointArray[v.x, v.y] = true;
+                    GameManager.checkPoints++;
+                    GameManager.groundMap.SetTile(new Vector3Int(v.x, v.y, 0), GameManager.checkPoint_true);
+                }
+            }
+
+            foreach(Bomb o in GameManager.bombList)
+            {
+                if(o.exist)
+                {
+                    o.SetTime(round);
+                }
+            }
+        }
         if(actionType == ActionType.SetRail)
         {
             //恢复连接铁轨的状态，删除放置的铁轨

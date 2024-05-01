@@ -7,7 +7,8 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
-    public int timer;
+    public int init_timer;
+    int timer;
 
     //爆炸标志位，用于懒删除
     public bool exist = true;
@@ -16,6 +17,14 @@ public class Bomb : MonoBehaviour
     Vector2Int[] directions = { new Vector2Int(-1, -1), new Vector2Int(-1, 1), new Vector2Int(1, -1), new Vector2Int(1, 1),
                                 Vector2Int.left, Vector2Int.right, Vector2Int.up, Vector2Int.down, Vector2Int.zero };
 
+    public void Initialize(Vector2Int cellPosition)
+    {
+        timer = init_timer;
+        SetPosition(new Vector2Int(cellPosition.x, cellPosition.y));
+        Transform textMesh = transform.GetChild(0).GetChild(0);
+        textMesh.GetComponent<TextMeshProUGUI>().text = timer.ToString();
+    }
+
     public void MinusTime()
     {
         timer--;
@@ -23,8 +32,19 @@ public class Bomb : MonoBehaviour
         textMesh.GetComponent<TextMeshProUGUI>().text = timer.ToString();
         if( timer == 0 )
         {
+            GameManager.state_bomb = true;
+            GameManager.state_objects.Add(gameObject);
+
             Explosion();
         }
+    }
+
+    //根据回合数计算当前倒计时
+    public void SetTime(int round)
+    {
+        timer = init_timer - round;
+        Transform textMesh = transform.GetChild(0).GetChild(0);
+        textMesh.GetComponent<TextMeshProUGUI>().text = timer.ToString();
     }
 
     public void Explosion()
@@ -53,8 +73,14 @@ public class Bomb : MonoBehaviour
             Debug.Log("火车被爆炸波及，游戏结束！");
         }
 
+        GameManager.propArray[position.x, position.y] = null;
         this.exist = false;
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+    }
+
+    public void Undo()
+    {
+
     }
 
     public void SetPosition(Vector2Int position)
@@ -62,4 +88,8 @@ public class Bomb : MonoBehaviour
         this.position = position;
     }
 
+    public Vector2Int GetPosition()
+    {
+        return position;
+    }
 }

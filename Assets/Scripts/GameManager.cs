@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -9,6 +10,9 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public GameObject train;
+
+    //回合数，移动一格算一个回合
+    public static int round;
 
     //测试用起点终点坐标，是否沿用待定，TileMap坐标
     public Vector2Int startStation;
@@ -71,12 +75,32 @@ public class GameManager : MonoBehaviour
     //地面贴图
     public static Tile ground;
 
+    //检查点贴图
+    public static Tile checkPoint_true;
+    public static Tile checkPoint_false;
+
+    //障碍贴图
+    public static Tile rock;
+
     //全局参数
     public static int checkPoints;
     public int init_rails;
     public static int rails;
     public int init_pickaxe;
     public static int pickaxe;
+
+
+    //状态压栈使用的临时变量
+    public static int state_round;
+    public static bool state_bomb;
+    public static bool state_pickaxe;
+    public static bool state_checkpoint;
+    public static List<GameObject> state_objects;
+    public static List<Vector2Int> state_checkPoints;
+    public static Vector2Int state_playerPos;
+    public static Vector2Int state_playerForward;
+    public static Rail[,] state_railArray;
+    public static int[,] state_obstacleArray;
 
     // Start is called before the first frame update
     void Start()
@@ -85,8 +109,10 @@ public class GameManager : MonoBehaviour
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         mainCamera.transparencySortAxis = new Vector3(0.49f, 2f, 0.49f);
 
+        round = 0;
+
         //初始化状态栈
-        stateStack = new StateStack<GameState>(10);
+        stateStack = new StateStack<GameState>(20);
 
         //初始化Array
         railArray = new Rail[8, 8];
@@ -104,6 +130,9 @@ public class GameManager : MonoBehaviour
         rail_rightUp = Resources.Load<Tile>("Palettes/rail_rightUp");
         highlight = Resources.Load<Tile>("Palettes/highlight");
         ground = Resources.Load<Tile>("Palettes/ground");
+        checkPoint_false = Resources.Load<Tile>("Palettes/ground");
+        checkPoint_true = Resources.Load<Tile>("Palettes/checkPoint");
+        rock = Resources.Load<Tile>("Palettes/rock");
 
         //初始化Tilemap
         railMap = GameObject.Find("Rail").GetComponent<Tilemap>();
@@ -303,9 +332,7 @@ public class GameManager : MonoBehaviour
                 {
                     propArray[cellPosition.x, cellPosition.y] = go;
                     Bomb newBomb = go.GetComponent<Bomb>();
-                    newBomb.SetPosition(new Vector2Int(cellPosition.x, cellPosition.y));
-                    Transform textMesh = newBomb.transform.GetChild(0).GetChild(0);
-                    textMesh.GetComponent<TextMeshProUGUI>().text = newBomb.timer.ToString();
+                    newBomb.Initialize(new Vector2Int(cellPosition.x, cellPosition.y));
                     bombList.Add(newBomb);
                 }
                 else
@@ -522,13 +549,56 @@ public class GameManager : MonoBehaviour
 
     public void RunStep()
     {
+        //初始化状态临时变量
+        state_round = round;
+        state_bomb = false;
+        state_pickaxe = false;
+        state_checkpoint = false;
+        state_objects = new List<GameObject>();
+        state_checkPoints = new List<Vector2Int>();
+        state_playerPos = player.GetPosition();
+        state_playerForward = player.GetForwardPosition();
+        state_railArray = new Rail[8, 8];
+        state_obstacleArray = new int[8, 8];
+
+        for(int i = 0; i < 8; i++)
+        {
+            for(int j = 0; j < 8; j++)
+            {
+                if (railArray[i, j] != null)
+                    state_railArray[i, j] = (Rail)railArray[i, j].Clone();
+                state_obstacleArray[i, j] = obstacleArray[i, j];
+            }
+        }
+
         //运行一步
         player.Move();
-        UpdateUI();
     }
 
     public void RunFinish()
     {
+        //初始化状态临时变量
+        state_round = round;
+        state_bomb = false;
+        state_pickaxe = false;
+        state_checkpoint = false;
+        state_objects = new List<GameObject>();
+        state_checkPoints = new List<Vector2Int>();
+        state_playerPos = player.GetPosition();
+        state_playerForward = player.GetForwardPosition();
+        state_railArray = new Rail[8, 8];
+        state_obstacleArray = new int[8, 8];
+
+        for (int i = 0; i < 8; i++)
+        {
+            for (int j = 0; j < 8; j++)
+            {
+                if(railArray[i, j] != null)
+                    state_railArray[i, j] = (Rail)railArray[i, j].Clone();
+                state_obstacleArray[i, j] = obstacleArray[i, j];
+            }
+        }
+
         //连续运行
         continuouslyMove = true;
         player.Move();
@@ -549,6 +619,7 @@ public class GameManager : MonoBehaviour
     {
         GameObject.Find("RunStep").GetComponent<Button>().interactable = false;
         GameObject.Find("Run").GetComponent<Button>().interactable = false;
+        GameObject.Find("Undo").GetComponent<Button>().interactable = false;
         GameObject.Find("RailButton").GetComponent<Button>().interactable = false;
         GameObject.Find("PickaxeButton").GetComponent<Button>().interactable = false;
     }
@@ -558,8 +629,9 @@ public class GameManager : MonoBehaviour
     {
         GameObject.Find("RunStep").GetComponent<Button>().interactable = true;
         GameObject.Find("Run").GetComponent<Button>().interactable = true;
+        GameObject.Find("Undo").GetComponent<Button>().interactable = true;
         //使用道具的按钮需要先判定剩余数量
-        if(rails > 0)
+        if (rails > 0)
             GameObject.Find("RailButton").GetComponent<Button>().interactable = true;
         if(pickaxe > 0)
             GameObject.Find("PickaxeButton").GetComponent<Button>().interactable = true;
