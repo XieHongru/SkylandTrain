@@ -53,8 +53,25 @@ public class Train : MonoBehaviour
             }
             else
             {
-                Debug.Log("不允许继续前进！");
-                return false;
+                if (GameManager.obstacleArray[position.x + forwardDirection.x, position.y + forwardDirection.y] == 4)
+                {
+                    SetForwardDirection(-forwardDirection);
+                    GameState gameState = new GameState(GameState.ActionType.Move, GameManager.state_playerPos, GameManager.state_playerForward,
+                                                    GameManager.state_bomb, GameManager.state_pickaxe, GameManager.state_checkpoint,
+                                                    GameManager.state_objects, GameManager.state_checkPoints, GameManager.state_round,
+                                                    GameManager.state_railArray, GameManager.state_obstacleArray);
+                    GameManager.stateStack.Push(gameState);
+
+                    GameManager.continuouslyMove = false;
+                    GameManager.state = GameManager.States.等待操作;
+                    GameManager.ActiveButtons();
+                    return true;
+                }
+                else
+                {
+                    Debug.Log("不允许继续前进！");
+                    return false;
+                }
             }
         }
     }

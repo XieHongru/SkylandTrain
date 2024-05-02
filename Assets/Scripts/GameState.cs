@@ -186,6 +186,11 @@ public class GameState
                                     GameManager.obstacleArray[detectPos.x, detectPos.y] = 2;
                                     GameManager.obstacleMap.SetTile(new Vector3Int(detectPos.x, detectPos.y, 0), GameManager.rock);
                                 }
+                                else if (obstacleArray[detectPos.x, detectPos.y] == 4)
+                                {
+                                    GameManager.obstacleArray[detectPos.x, detectPos.y] = 4;
+                                    GameManager.obstacleMap.SetTile(new Vector3Int(detectPos.x, detectPos.y, 0), GameManager.slime);
+                                }
                             }
                         }
 
@@ -248,7 +253,11 @@ public class GameState
             }
             else if(breakObstacle != null)
             {
-                GameManager.obstacleArray[breakPos.x, breakPos.y] = 2;
+                if(breakObstacle.name == "rock")
+                    GameManager.obstacleArray[breakPos.x, breakPos.y] = 2;
+                else if(breakObstacle.name == "slime")
+                    GameManager.obstacleArray[breakPos.x, breakPos.y] = 4;
+
                 GameManager.obstacleMap.SetTile(new Vector3Int(breakPos.x, breakPos.y, 0), breakObstacle);
             }
             GameManager.pickaxe++;

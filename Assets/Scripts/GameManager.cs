@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     public static Train player;
     public static Rail[,] railArray;
-    //障碍物表，0表示空地，1表示铁轨，2表示山，3表示湖
+    //障碍物表，0表示空地，1表示铁轨，2表示山，3表示湖，4表示史莱姆墙
     public static int[,] obstacleArray; 
     //道具表
     public static GameObject[,] propArray;
@@ -81,6 +81,7 @@ public class GameManager : MonoBehaviour
 
     //障碍贴图
     public static Tile rock;
+    public static Tile slime;
 
     //全局参数
     public static int checkPoints;
@@ -133,6 +134,7 @@ public class GameManager : MonoBehaviour
         checkPoint_false = Resources.Load<Tile>("Palettes/ground");
         checkPoint_true = Resources.Load<Tile>("Palettes/checkPoint");
         rock = Resources.Load<Tile>("Palettes/rock");
+        slime = Resources.Load<Tile>("Palettes/slime");
 
         //初始化Tilemap
         railMap = GameObject.Find("Rail").GetComponent<Tilemap>();
@@ -282,9 +284,12 @@ public class GameManager : MonoBehaviour
                     //Debug.Log(railArray[i, j] + ",position:" + railArray[i, j].tilePosition + ",direction:" + railArray[i, j].linkDirection1 + "," + railArray[i, j].linkDirection2);
                 }
                 //地形图层探测
-                if(obstacleMap.HasTile(cellPosition) && obstacleMap.GetTile(cellPosition).name == "rock")
+                if(obstacleMap.HasTile(cellPosition))
                 {
-                    obstacleArray[i,j] = 2;
+                    if (obstacleMap.GetTile(cellPosition).name == "rock")
+                        obstacleArray[i, j] = 2;
+                    else if (obstacleMap.GetTile(cellPosition).name == "slime")
+                        obstacleArray[i, j] = 4;
                 }
                 if(groundMap.HasTile(cellPosition))
                 {
