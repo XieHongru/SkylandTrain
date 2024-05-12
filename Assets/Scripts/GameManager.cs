@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour
     //回合数，移动一格算一个回合
     public static int round;
 
+    //特殊规则，史莱姆墙壁
+    public bool slime;
+    public static bool active_slime;
+
     //测试用起点终点坐标，是否沿用待定，TileMap坐标
     public Vector2Int startStation;
     public Vector2Int endStation;
@@ -81,7 +85,7 @@ public class GameManager : MonoBehaviour
 
     //障碍贴图
     public static Tile rock;
-    public static Tile slime;
+    //public static Tile slime;
 
     //全局参数
     public static int checkPoints;
@@ -111,6 +115,7 @@ public class GameManager : MonoBehaviour
         mainCamera.transparencySortAxis = new Vector3(0.49f, 2f, 0.49f);
 
         round = 0;
+        active_slime = slime;
 
         //初始化状态栈
         stateStack = new StateStack<GameState>(20);
@@ -131,10 +136,10 @@ public class GameManager : MonoBehaviour
         rail_rightUp = Resources.Load<Tile>("Palettes/rail_rightUp");
         highlight = Resources.Load<Tile>("Palettes/highlight");
         ground = Resources.Load<Tile>("Palettes/ground");
-        checkPoint_false = Resources.Load<Tile>("Palettes/ground");
+        checkPoint_false = Resources.Load<Tile>("Palettes/checkPoint_false");
         checkPoint_true = Resources.Load<Tile>("Palettes/checkPoint");
         rock = Resources.Load<Tile>("Palettes/rock");
-        slime = Resources.Load<Tile>("Palettes/slime");
+        //slime = Resources.Load<Tile>("Palettes/slime");
 
         //初始化Tilemap
         railMap = GameObject.Find("Rail").GetComponent<Tilemap>();
@@ -157,7 +162,7 @@ public class GameManager : MonoBehaviour
 
         //起点TileMap坐标转世界坐标
         Vector3 startStationWorld = railMap.GetCellCenterWorld(new Vector3Int(startStation.x, startStation.y, 0));
-        startStationWorld.y += 0.25f;
+        startStationWorld.y += 0.15f;
 
         //拷贝火车对象副本并初始化玩家对象
         player = Instantiate(train, startStationWorld, Quaternion.identity).GetComponent<Train>();
@@ -262,7 +267,7 @@ public class GameManager : MonoBehaviour
         //将TileMap信息转化为状态数组
 
         //关卡地图完备性检查
-        if (groundMap == null || railMap == null || previewMap == null)
+        if (groundMap == null || railMap == null || previewMap == null || obstacleMap == null)
         {
             Debug.Log("地图图层数据缺失！");
             return;
@@ -282,23 +287,26 @@ public class GameManager : MonoBehaviour
                     railArray[i,j] = RailInitialize(i, j, railMap.GetTile(cellPosition).name);
 
                     //Debug.Log(railArray[i, j] + ",position:" + railArray[i, j].tilePosition + ",direction:" + railArray[i, j].linkDirection1 + "," + railArray[i, j].linkDirection2);
+
                 }
                 //地形图层探测
                 if(obstacleMap.HasTile(cellPosition))
                 {
-                    if (obstacleMap.GetTile(cellPosition).name == "rock")
+                    string name = obstacleMap.GetTile(cellPosition).name;
+                    if ( name == "rock" || name == "rock2" || name == "rock3")
                         obstacleArray[i, j] = 2;
-                    else if (obstacleMap.GetTile(cellPosition).name == "slime")
-                        obstacleArray[i, j] = 4;
+                    //else if (obstacleMap.GetTile(cellPosition).name == "slime")
+                    //    obstacleArray[i, j] = 4;
                 }
                 if(groundMap.HasTile(cellPosition))
                 {
-                    if(groundMap.GetTile(cellPosition).name == "checkPoint")
+                    string name = groundMap.GetTile(cellPosition).name;
+                    if (name == "checkPoint")
                     {
                         checkPointArray[i, j] = true;
                         checkPoints++;
                     }
-                    else if(groundMap.GetTile(cellPosition).name == "pool")
+                    else if(name == "pool" || name == "pool_1" || name == "pool_2" || name == "pool_3" || name == "pool_4")
                     {
                         obstacleArray[i, j] = 3;
                     }
@@ -314,7 +322,7 @@ public class GameManager : MonoBehaviour
         foreach(GameObject go in pickaxeObjects)
         {
             Vector3Int cellPosition = groundMap.WorldToCell(go.transform.position);
-            go.transform.position = groundMap.GetCellCenterWorld(cellPosition) + new Vector3(0, 0.25f, 0);
+            go.transform.position = groundMap.GetCellCenterWorld(cellPosition) + new Vector3(0, 0.15f, 0);
             if(MapBoundTest(new Vector2Int(cellPosition.x, cellPosition.y)))
             {
                 if (propArray[cellPosition.x, cellPosition.y] == null)
@@ -337,7 +345,7 @@ public class GameManager : MonoBehaviour
         foreach (GameObject go in bombObjects)
         {
             Vector3Int cellPosition = groundMap.WorldToCell(go.transform.position);
-            go.transform.position = groundMap.GetCellCenterWorld(cellPosition) + new Vector3(0, 0.25f, 0);
+            go.transform.position = groundMap.GetCellCenterWorld(cellPosition) + new Vector3(0, 0.15f, 0);
             if (MapBoundTest(new Vector2Int(cellPosition.x, cellPosition.y)))
             {
                 if (propArray[cellPosition.x, cellPosition.y] == null)
@@ -362,8 +370,8 @@ public class GameManager : MonoBehaviour
 
     void InitializeUI()
     {
-        GameObject.Find("RailCountText").GetComponent<Text>().text = "放置铁轨  " + rails;
-        GameObject.Find("PickaxeCountText").GetComponent<Text>().text = "使用十字镐  " + pickaxe;
+        GameObject.Find("RailCountText").GetComponent<Text>().text = Convert.ToString(rails);
+        GameObject.Find("PickaxeCountText").GetComponent<Text>().text = Convert.ToString(pickaxe);
         if (pickaxe == 0)
         {
             GameObject.Find("PickaxeButton").GetComponent<Button>().interactable = false;
@@ -372,8 +380,8 @@ public class GameManager : MonoBehaviour
 
     public static void UpdateUI()
     {
-        GameObject.Find("RailCountText").GetComponent<Text>().text = "放置铁轨  " + rails;
-        GameObject.Find("PickaxeCountText").GetComponent<Text>().text = "使用十字镐  " + pickaxe;
+        GameObject.Find("RailCountText").GetComponent<Text>().text = Convert.ToString(rails);
+        GameObject.Find("PickaxeCountText").GetComponent<Text>().text = Convert.ToString(pickaxe);
         if (rails == 0)
         {
             GameObject.Find("RailButton").GetComponent<Button>().interactable = false;
@@ -467,6 +475,10 @@ public class GameManager : MonoBehaviour
 
                     //放置铁轨
                     previewRail.SetTile();
+                    if(!groundMap.HasTile(mouseCellPos))
+                    {
+                        groundMap.SetTile(mouseCellPos, ground);
+                    }
                     //更新railArray和obstacleArray
                     railArray[mouseCellPos.x, mouseCellPos.y] = previewRail;
                     obstacleArray[mouseCellPos.x, mouseCellPos.y] = 1;

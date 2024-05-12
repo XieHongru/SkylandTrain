@@ -75,8 +75,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278914045
+  m_fontColor: {r: 0.990566, g: 0.04360973, b: 0.04360973, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.25
-  m_fontSizeBase: 0.25
+  m_fontSize: 0.18
+  m_fontSizeBase: 0.18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -319,8 +319,8 @@ SpriteRenderer:
   m_SortingLayerID: 1548363011
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300202, guid: a5994f41d8a85744d869f00e6828bb76, type: 3}
-  m_Color: {r: 1, g: 0.07674154, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 29418005bd37845488c2ec3ef8b18721, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -342,7 +342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81b7f0b89dbc7fc42a2aef802e34e38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 8
+  init_timer: 0
+  exist: 1
 --- !u!222 &5122594338427479095
 CanvasRenderer:
   m_ObjectHideFlags: 0

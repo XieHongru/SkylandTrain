@@ -20,15 +20,42 @@ public class Train : MonoBehaviour
     
     public bool Move()
     {
+        if(position == GameManager.start)
+        {
+            Rail start_rail = GameManager.railArray[position.x, position.y];
+            if (start_rail.GetLinkDirection1() == Vector2Int.left)
+            {
+                SetForwardDirection(start_rail.GetLinkDirection2());
+            }
+            else
+            {
+                SetForwardDirection(start_rail.GetLinkDirection1());
+            }
+        }
+
         if (!GameManager.MapBoundTest(position + forwardDirection))
         {
+            if(GameManager.active_slime)
+            {
+                SetForwardDirection(-forwardDirection);
+                GameState gameState = new GameState(GameState.ActionType.Move, GameManager.state_playerPos, GameManager.state_playerForward,
+                                                GameManager.state_bomb, GameManager.state_pickaxe, GameManager.state_checkpoint,
+                                                GameManager.state_objects, GameManager.state_checkPoints, GameManager.state_round,
+                                                GameManager.state_railArray, GameManager.state_obstacleArray);
+                GameManager.stateStack.Push(gameState);
+
+                GameManager.continuouslyMove = false;
+                GameManager.state = GameManager.States.等待操作;
+                GameManager.ActiveButtons();
+                return true;
+            }
             return false;
         }
         else
         {
             //如果前进方向有铁轨，则移动火车
             Rail nextRail = GameManager.railArray[position.x + forwardDirection.x, position.y + forwardDirection.y];
-            if (nextRail != null)
+            if (nextRail != null && (nextRail.GetLinkDirection1() == -forwardDirection || nextRail.GetLinkDirection2() == -forwardDirection))
             {
                 //判断前方是否是终点，如果是，判断是否能够进入
                 if (position + forwardDirection == GameManager.end)
@@ -53,25 +80,8 @@ public class Train : MonoBehaviour
             }
             else
             {
-                if (GameManager.obstacleArray[position.x + forwardDirection.x, position.y + forwardDirection.y] == 4)
-                {
-                    SetForwardDirection(-forwardDirection);
-                    GameState gameState = new GameState(GameState.ActionType.Move, GameManager.state_playerPos, GameManager.state_playerForward,
-                                                    GameManager.state_bomb, GameManager.state_pickaxe, GameManager.state_checkpoint,
-                                                    GameManager.state_objects, GameManager.state_checkPoints, GameManager.state_round,
-                                                    GameManager.state_railArray, GameManager.state_obstacleArray);
-                    GameManager.stateStack.Push(gameState);
-
-                    GameManager.continuouslyMove = false;
-                    GameManager.state = GameManager.States.等待操作;
-                    GameManager.ActiveButtons();
-                    return true;
-                }
-                else
-                {
-                    Debug.Log("不允许继续前进！");
-                    return false;
-                }
+                Debug.Log("不允许继续前进！");
+                return false;
             }
         }
     }
@@ -137,9 +147,9 @@ public class Train : MonoBehaviour
 
         //获取起止世界坐标
         Vector3 startPosition = GameManager.railMap.GetCellCenterWorld(new Vector3Int(startPos.x, startPos.y, 0));
-        startPosition.y += 0.25f;
+        startPosition.y += 0.15f;
         Vector3 endPosition = GameManager.railMap.GetCellCenterWorld(new Vector3Int(startPos.x + forwardDirection.x, startPos.y + forwardDirection.y, 0));
-        endPosition.y += 0.25f;
+        endPosition.y += 0.15f;
         float elapsedTime = 0f;
 
         //移动

@@ -71,7 +71,7 @@ public class Rail : ICloneable
                         linkedRail2 = GameManager.railArray[detectPos2.x, detectPos2.y];
                     }
                     //如果连接方向出现没有铁轨的情况，说明该铁轨是可以连接的
-                    if (linkedRail1 == null || linkedRail2 == null)
+                    if ( !CheckLink(linkedRail1, -detectRail.GetLinkDirection1()) || !CheckLink(linkedRail2, -detectRail.GetLinkDirection2()) )
                     {
                         connection.Add(i);
                     }
@@ -274,7 +274,7 @@ public class Rail : ICloneable
         }
 
         //如果相邻铁轨1已经连接或火车位于该处，什么也不做
-        if (linkedRail1 == null || GameManager.player.GetPosition() == detectPos1 ||
+        if (linkedRail1 == null || (GameManager.player.GetPosition() == detectPos1 && GameManager.start != detectPos1) ||
             linkedRail1.GetLinkDirection1() == this.tilePosition - linkedRail1.tilePosition ||
             linkedRail1.GetLinkDirection2() == this.tilePosition - linkedRail1.tilePosition)
         {
@@ -285,10 +285,10 @@ public class Rail : ICloneable
             //查找相邻铁轨1的连接方向1上是否有铁轨
             Vector2Int subDetectPos1 = detectPos1 + linkedRail1.GetLinkDirection1();
             Vector2Int subDetectPos2 = detectPos1 + linkedRail1.GetLinkDirection2();
-            if (GameManager.MapBoundTest(subDetectPos1) && GameManager.railArray[subDetectPos1.x, subDetectPos1.y] != null)
+            if (GameManager.MapBoundTest(subDetectPos1) && CheckLink( GameManager.railArray[subDetectPos1.x, subDetectPos1.y], -linkedRail1.GetLinkDirection1()))
             {
                 //如果有，则查找相邻铁轨1的连接方向2上是否有铁轨
-                if (!GameManager.MapBoundTest(subDetectPos2) || GameManager.railArray[subDetectPos2.x, subDetectPos2.y] == null)
+                if (!GameManager.MapBoundTest(subDetectPos2) || !CheckLink(GameManager.railArray[subDetectPos2.x, subDetectPos2.y], -linkedRail1.GetLinkDirection2()))
                 {
                     //如果方向2上没有铁轨则连接，否则跳过处理该相邻铁轨
                     linkedRail1.SetLinkDirection2(this.tilePosition - linkedRail1.tilePosition);
@@ -314,7 +314,7 @@ public class Rail : ICloneable
         }
 
         //如果相邻铁轨2已经连接或火车位于该处，什么也不做
-        if (linkedRail2 == null || GameManager.player.GetPosition() == detectPos2 ||
+        if (linkedRail2 == null || (GameManager.player.GetPosition() == detectPos2 && GameManager.start != detectPos2) ||
             linkedRail2.GetLinkDirection1() == this.tilePosition - linkedRail2.tilePosition ||
             linkedRail2.GetLinkDirection2() == this.tilePosition - linkedRail2.tilePosition)
         {
@@ -325,10 +325,10 @@ public class Rail : ICloneable
             Vector2Int subDetectPos1 = detectPos2 + linkedRail2.GetLinkDirection1();
             Vector2Int subDetectPos2 = detectPos2 + linkedRail2.GetLinkDirection2();
             //查找相邻铁轨2的连接方向1上是否有铁轨
-            if (GameManager.MapBoundTest(subDetectPos1) && GameManager.railArray[subDetectPos1.x, subDetectPos1.y] != null)
+            if (GameManager.MapBoundTest(subDetectPos1) && CheckLink(GameManager.railArray[subDetectPos1.x, subDetectPos1.y], -linkedRail2.GetLinkDirection1()))
             {
                 //如果有，则查找相邻铁轨2的连接方向2上是否有铁轨
-                if (!GameManager.MapBoundTest(subDetectPos2) || GameManager.railArray[subDetectPos2.x, subDetectPos2.y] == null)
+                if (!GameManager.MapBoundTest(subDetectPos2) || !CheckLink(GameManager.railArray[subDetectPos2.x, subDetectPos2.y], -linkedRail2.GetLinkDirection2()))
                 {
                     //如果方向2上没有铁轨则连接，否则跳过处理该相邻铁轨
                     linkedRail2.SetLinkDirection2(this.tilePosition - linkedRail2.tilePosition);
@@ -392,6 +392,15 @@ public class Rail : ICloneable
                 Debug.Log("False Sprite!");
                 break;
         }
+    }
+
+    bool CheckLink(Rail rail, Vector2Int linkdir)
+    {
+        if(rail == null) 
+            return false;
+        if(rail.GetLinkDirection1() == linkdir || rail.GetLinkDirection2() == linkdir)
+            return true;
+        return false;
     }
 
     public Vector2Int GetPosition()

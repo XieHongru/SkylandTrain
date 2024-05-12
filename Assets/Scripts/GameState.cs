@@ -91,7 +91,7 @@ public class GameState
                 {
                     if(obj.CompareTag("Pickaxe"))
                     {
-                        Vector3Int tilePos = GameManager.groundMap.WorldToCell(obj.transform.position - new Vector3(0, 0.25f, 0));
+                        Vector3Int tilePos = GameManager.groundMap.WorldToCell(obj.transform.position - new Vector3(0, 0.15f, 0));
                         propArray[tilePos.x, tilePos.y] = obj;
                         propPos.Add(new Vector2Int(tilePos.x, tilePos.y));
                     }
@@ -148,7 +148,7 @@ public class GameState
             animator.SetFloat("DirectionX", playerForward.x);
             animator.SetFloat("DirectionY", playerForward.y);
             Vector3 worldPos = GameManager.groundMap.GetCellCenterWorld(new Vector3Int(playerPos.x, playerPos.y, 0));
-            worldPos.y += 0.25f;
+            worldPos.y += 0.15f;
             GameManager.player.transform.position = worldPos;
             GameManager.round = round;
 
@@ -186,11 +186,11 @@ public class GameState
                                     GameManager.obstacleArray[detectPos.x, detectPos.y] = 2;
                                     GameManager.obstacleMap.SetTile(new Vector3Int(detectPos.x, detectPos.y, 0), GameManager.rock);
                                 }
-                                else if (obstacleArray[detectPos.x, detectPos.y] == 4)
-                                {
-                                    GameManager.obstacleArray[detectPos.x, detectPos.y] = 4;
-                                    GameManager.obstacleMap.SetTile(new Vector3Int(detectPos.x, detectPos.y, 0), GameManager.slime);
-                                }
+                                //else if (obstacleArray[detectPos.x, detectPos.y] == 4)
+                                //{
+                                //    GameManager.obstacleArray[detectPos.x, detectPos.y] = 4;
+                                //    GameManager.obstacleMap.SetTile(new Vector3Int(detectPos.x, detectPos.y, 0), GameManager.slime);
+                                //}
                             }
                         }
 
@@ -239,6 +239,10 @@ public class GameState
             }
             GameManager.railArray[setPos.x, setPos.y] = null;
             GameManager.railMap.SetTile(new Vector3Int(setPos.x, setPos.y, 0), null);
+            if(GameManager.groundMap.GetTile(new Vector3Int(setPos.x, setPos.y, 0)).name == "ground")
+            {
+                GameManager.groundMap.SetTile(new Vector3Int(setPos.x, setPos.y, 0), null);
+            }
             GameManager.obstacleArray[setPos.x, setPos.y] = 0;
             GameManager.rails++;
             GameManager.UpdateUI();
