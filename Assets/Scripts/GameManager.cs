@@ -309,7 +309,9 @@ public class GameManager : MonoBehaviour
                         checkPointArray[i, j] = true;
                         checkPoints++;
                     }
-                    else if(name == "pool" || name == "pool_1" || name == "pool_2" || name == "pool_3" || name == "pool_4")
+                    else if(name == "pool" || name == "pool_1" || name == "pool_2" || name == "pool_3" || name == "pool_4" ||
+                            name == "pool3_1" || name == "pool3_2" || name == "pool3_3" || name == "pool3_4" || name == "pool3_5" ||
+                            name == "pool3_6" || name == "pool3_7" || name == "pool3_8" || name == "pool3_9")
                     {
                         obstacleArray[i, j] = 3;
                     }
