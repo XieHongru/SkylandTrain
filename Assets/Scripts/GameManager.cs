@@ -186,6 +186,9 @@ public class GameManager : MonoBehaviour
 
         //≥ı ºªØUI
         InitializeUI();
+
+        Animator animator = GameObject.Find("LoadMask").GetComponent<Animator>();
+        animator.Play("startgame");
     }
 
     // Update is called once per frame
@@ -687,5 +690,11 @@ public class GameManager : MonoBehaviour
     public static void GameFail()
     {
         
+    }
+
+    public static void GameWin()
+    {
+        Animator animator = GameObject.Find("LoadMask").GetComponent<Animator>();
+        animator.Play("loadscene");
     }
 }

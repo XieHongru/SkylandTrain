@@ -19,8 +19,9 @@ public class UIController : MonoBehaviour
 
     public void RunStep()
     {
-        if(GameManager.state != GameManager.States.播放动画)
-            GameObject.Find("GameManager").GetComponent<GameManager>().RunStep();
+        //if(GameManager.state != GameManager.States.播放动画)
+        //    GameObject.Find("GameManager").GetComponent<GameManager>().RunStep();
+        GameManager.GameWin();
     }
 
     public void Run()

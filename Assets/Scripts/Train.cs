@@ -97,6 +97,7 @@ public class Train : MonoBehaviour
                     {
                         Debug.Log("¹Ø¿¨Í¨¹ý£¡");
                         MoveToCell(nextRail);
+                        GameManager.GameWin();
                         return true;
                     }
                     else
