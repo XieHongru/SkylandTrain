@@ -141,6 +141,7 @@ public class GameState
     {
         if(actionType == ActionType.Move)
         {
+            GameManager.player.gameObject.SetActive(true);
             //恢复火车位置和方向
             GameManager.player.SetPosition(playerPos);
             GameManager.player.SetForwardDirection(playerForward);
@@ -148,7 +149,7 @@ public class GameState
             animator.SetFloat("DirectionX", playerForward.x);
             animator.SetFloat("DirectionY", playerForward.y);
             Vector3 worldPos = GameManager.groundMap.GetCellCenterWorld(new Vector3Int(playerPos.x, playerPos.y, 0));
-            worldPos.y += 0.15f;
+            worldPos.y += 0.25f;
             GameManager.player.transform.position = worldPos;
             GameManager.round = round;
 

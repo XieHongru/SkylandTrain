@@ -58,3 +58,6 @@ TagManager:
   - name: Preview
     uniqueID: 1740213787
     locked: 0
+  - name: Explosion
+    uniqueID: 837473985
+    locked: 0

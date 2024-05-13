@@ -1,23 +1,56 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
+using static Unity.VisualScripting.Member;
 using static UnityEditor.PlayerSettings;
+using static UnityEngine.GraphicsBuffer;
 
 public class Train : MonoBehaviour
 {
     Vector2Int position;
     Vector2Int forwardDirection;
+    Vector2 worldposition;
 
     Animator animator;
+
+    public float local_y;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
     }
-    
+
+    private void Update()
+    {
+        float deltaY = 0f;
+        float time = Time.time;
+        if(Mod(time, 1f) < 0.5f)
+        {
+            deltaY = 2 * Mod(time, 1f);
+        }
+        else
+        {
+            deltaY = 2 - 2 * Mod(time, 1f);
+        }
+        gameObject.transform.position = new Vector3(worldposition.x, worldposition.y , 0) + new Vector3(0, deltaY / 10, 0);
+        //gameObject.transform.position = GameManager.railMap.GetCellCenterWorld(new Vector3Int(position.x, position.y, 0)) + new Vector3(0, currentTime.Second / 20f + .25f, 0);
+    }
+
+    float Mod(float x, float y)
+    {
+        if (y == 0)
+        {
+            // 避免除零错误
+            return float.NaN;
+        }
+
+        return x - y * Mathf.Floor(x / y);
+    }
+
     public bool Move()
     {
         if(position == GameManager.start)
@@ -80,10 +113,66 @@ public class Train : MonoBehaviour
             }
             else
             {
-                Debug.Log("不允许继续前进！");
+                //前方无铁轨或者是墙和湖泊
+                //Debug.Log("不允许继续前进！");
+                //if(!GameManager.continuouslyMove)
+                //{
+                //    MoveToBreak();
+                //}
                 return false;
             }
         }
+    }
+
+    void MoveToBreak()
+    {
+        //GameManager.round++;
+
+        //播放期间禁用操作按钮
+        GameManager.BanButtons();
+
+        //播放火车爆炸动画
+        StartCoroutine(MoveExplosion());
+    }
+
+    private IEnumerator MoveExplosion()
+    {
+        GameManager.state = GameManager.States.播放动画;
+
+        Debug.Log("defeat");
+
+        //获取起止世界坐标
+        Vector3 startPosition = GameManager.railMap.GetCellCenterWorld(new Vector3Int(position.x, position.y, 0));
+        startPosition.y += 0.25f;
+        Vector3 endPosition = GameManager.railMap.GetCellCenterWorld(new Vector3Int(position.x + forwardDirection.x, position.y + forwardDirection.y, 0));
+        endPosition.y += 0.25f;
+        float elapsedTime = 0f;
+
+        //移动
+        while (elapsedTime < .2f)
+        {
+            transform.position = Vector3.Lerp(startPosition, endPosition, elapsedTime / .5f);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        //爆炸
+
+        //消失
+        gameObject.SetActive(false);
+
+
+        GameState gameState = new GameState(GameState.ActionType.Move, GameManager.state_playerPos, GameManager.state_playerForward,
+                                                GameManager.state_bomb, GameManager.state_pickaxe, GameManager.state_checkpoint,
+                                                GameManager.state_objects, GameManager.state_checkPoints, GameManager.state_round,
+                                                GameManager.state_railArray, GameManager.state_obstacleArray);
+        GameManager.stateStack.Push(gameState);
+
+        GameManager.state = GameManager.States.等待操作;
+        GameObject.Find("Undo").GetComponent<Button>().interactable = true;
+
+        //失败
+        GameManager.GameFail();
     }
 
     void MoveToCell(Rail nextRail)
@@ -93,8 +182,15 @@ public class Train : MonoBehaviour
         //播放期间禁用操作按钮
         GameManager.BanButtons();
 
+        //转弯
+        Vector2Int turnDir;
+        if(forwardDirection == -nextRail.GetLinkDirection1())
+            turnDir = nextRail.GetLinkDirection2();
+        else
+            turnDir = nextRail.GetLinkDirection1();
+
         //播放火车移动动画
-        StartCoroutine(MoveCoroutine(position));
+        StartCoroutine(MoveCoroutine(position, forwardDirection, turnDir));
 
         //更新火车位置坐标
         position += forwardDirection;
@@ -141,27 +237,65 @@ public class Train : MonoBehaviour
     }
 
     //火车移动协程
-    private IEnumerator MoveCoroutine(Vector2Int startPos)
+    private IEnumerator MoveCoroutine(Vector2Int startPos, Vector2Int forwardDir, Vector2Int turnDir)
     {
         GameManager.state = GameManager.States.播放动画;
 
+        //需要转向
+        if(turnDir != forwardDir)
+        {
+            if(forwardDir == Vector2Int.right && turnDir == Vector2Int.down)
+            {
+                animator.Play("1");
+            }
+            else if (forwardDir == Vector2Int.down && turnDir == Vector2Int.left)
+            {
+                animator.Play("2");
+            }
+            else if (forwardDir == Vector2Int.left && turnDir == Vector2Int.up)
+            {
+                animator.Play("3");
+            }
+            else if (forwardDir == Vector2Int.up && turnDir == Vector2Int.right)
+            {
+                animator.Play("4");
+            }
+            else if (forwardDir == Vector2Int.up && turnDir == Vector2Int.left)
+            {
+                animator.Play("5");
+            }
+            else if (forwardDir == Vector2Int.left && turnDir == Vector2Int.down)
+            {
+                animator.Play("6");
+            }
+            else if (forwardDir == Vector2Int.down && turnDir == Vector2Int.right)
+            {
+                animator.Play("7");
+            }
+            else if (forwardDir == Vector2Int.right && turnDir == Vector2Int.up)
+            {
+                animator.Play("8");
+            }
+        }
+
         //获取起止世界坐标
         Vector3 startPosition = GameManager.railMap.GetCellCenterWorld(new Vector3Int(startPos.x, startPos.y, 0));
-        startPosition.y += 0.15f;
+        startPosition.y += 0.25f;
         Vector3 endPosition = GameManager.railMap.GetCellCenterWorld(new Vector3Int(startPos.x + forwardDirection.x, startPos.y + forwardDirection.y, 0));
-        endPosition.y += 0.15f;
+        endPosition.y += 0.25f;
         float elapsedTime = 0f;
 
         //移动
-        while (elapsedTime < .5f)
+        while (elapsedTime < .8f)
         {
-            transform.position = Vector3.Lerp(startPosition, endPosition, elapsedTime / .5f);
+            worldposition = Vector3.Lerp(startPosition, endPosition, elapsedTime / .8f);
+            //transform.position = startPosition;
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
         // 确保移动到目标位置
-        transform.position = endPosition;
+        worldposition = endPosition;
         
         // 移动完后执行炸弹判定
         foreach(Bomb b in GameManager.bombList)
@@ -217,6 +351,7 @@ public class Train : MonoBehaviour
     public void SetPosition(Vector2Int position)
     {
         this.position = position;
+        this.worldposition = GameManager.railMap.GetCellCenterWorld(new Vector3Int(position.x, position.y, 0)) + new Vector3(0, .25f, 0);
     }
 
     public Vector2Int GetForwardPosition()

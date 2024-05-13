@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
     {
         //初始化相机
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
-        mainCamera.transparencySortAxis = new Vector3(0.49f, 2f, 0.49f);
+        mainCamera.transparencySortAxis = new Vector3(-0.1f, 0.2f, 0.49f);
 
         round = 0;
         active_slime = slime;
@@ -162,7 +162,7 @@ public class GameManager : MonoBehaviour
 
         //起点TileMap坐标转世界坐标
         Vector3 startStationWorld = railMap.GetCellCenterWorld(new Vector3Int(startStation.x, startStation.y, 0));
-        startStationWorld.y += 0.15f;
+        startStationWorld.y += 0.25f;
 
         //拷贝火车对象副本并初始化玩家对象
         player = Instantiate(train, startStationWorld, Quaternion.identity).GetComponent<Train>();
@@ -682,5 +682,10 @@ public class GameManager : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public static void GameFail()
+    {
+        
     }
 }

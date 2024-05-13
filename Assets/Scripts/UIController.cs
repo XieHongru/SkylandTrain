@@ -31,6 +31,7 @@ public class UIController : MonoBehaviour
 
     public void Retry()
     {
+        GameManager.ActiveButtons();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -39,6 +40,7 @@ public class UIController : MonoBehaviour
         GameState state = GameManager.stateStack.Pop();
         if(state != null )
         {
+            GameManager.ActiveButtons();
             state.Undo();
         }
     }
