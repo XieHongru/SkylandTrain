@@ -240,7 +240,7 @@ public class GameState
             }
             GameManager.railArray[setPos.x, setPos.y] = null;
             GameManager.railMap.SetTile(new Vector3Int(setPos.x, setPos.y, 0), null);
-            if(GameManager.groundMap.GetTile(new Vector3Int(setPos.x, setPos.y, 0)).name == "ground")
+            if(GameManager.groundMap.HasTile(new Vector3Int(setPos.x, setPos.y, 0)) && GameManager.groundMap.GetTile(new Vector3Int(setPos.x, setPos.y, 0)).name == "ground")
             {
                 GameManager.groundMap.SetTile(new Vector3Int(setPos.x, setPos.y, 0), null);
             }

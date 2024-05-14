@@ -9,7 +9,12 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static AudioSource audioSource;
+
     public GameObject train;
+    public GameObject explosion;
+
+    public static GameObject explosion_animation;
 
     //回合数，移动一格算一个回合
     public static int round;
@@ -110,6 +115,12 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject audioObject = new GameObject("AudioPlayer");
+        audioObject.AddComponent<AudioSource>();
+        audioSource = audioObject.GetComponent<AudioSource>();
+
+        explosion_animation = explosion;
+
         //初始化相机
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         mainCamera.transparencySortAxis = new Vector3(-0.1f, 0.2f, 0.49f);
@@ -455,7 +466,9 @@ public class GameManager : MonoBehaviour
             {
                 if ( obstacleArray[mouseCellPos.x, mouseCellPos.y ] != 0)
                 {
-                    Debug.Log("不能将铁轨放置在障碍物上！");
+                    audioSource.clip = Resources.Load<AudioClip>("Audios/CantSet");
+                    audioSource.Play();
+                    //Debug.Log("不能将铁轨放置在障碍物上！");
                 }
                 else
                 {
@@ -489,6 +502,9 @@ public class GameManager : MonoBehaviour
                     obstacleArray[mouseCellPos.x, mouseCellPos.y] = 1;
                     //处理连接铁轨可能的转向问题
                     previewRail.LinkNeighbour();
+
+                    audioSource.clip = Resources.Load<AudioClip>("Audios/SetandBreak");
+                    audioSource.Play();
                 }
             }
             else
@@ -525,10 +541,14 @@ public class GameManager : MonoBehaviour
             {
                 if (player.GetPosition() == new Vector2Int(mouseCellPos.x, mouseCellPos.y))
                 {
+                    audioSource.clip = Resources.Load<AudioClip>("Audios/CantSet");
+                    audioSource.Play();
                     Debug.Log("不能破坏火车所在方块！");
                 }
                 else if (obstacleArray[mouseCellPos.x, mouseCellPos.y] == 0 || obstacleArray[mouseCellPos.x, mouseCellPos.y] == 3)
                 {
+                    audioSource.clip = Resources.Load<AudioClip>("Audios/CantSet");
+                    audioSource.Play();
                     Debug.Log("没有可以破坏的对象！");
                 }
                 else
@@ -559,6 +579,8 @@ public class GameManager : MonoBehaviour
                         obstacleMap.SetTile(mouseCellPos, null);
                     }
                     obstacleArray[mouseCellPos.x, mouseCellPos.y] = 0;
+                    audioSource.clip = Resources.Load<AudioClip>("Audios/SetandBreak");
+                    audioSource.Play();
                 }
             }
             else

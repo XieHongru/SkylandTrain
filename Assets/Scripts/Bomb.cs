@@ -49,6 +49,13 @@ public class Bomb : MonoBehaviour
 
     public void Explosion()
     {
+        GameManager.audioSource.clip = Resources.Load<AudioClip>("Audios/Explosion");
+        GameManager.audioSource.Play();
+
+        GameObject explosion = Instantiate(GameManager.explosion_animation, 
+                                            GameManager.groundMap.CellToWorld(new Vector3Int(position.x, position.y, 0))
+                                            + new Vector3(0,.5f,0), Quaternion.identity);
+
         //记录火车是否在爆炸范围内
         bool flag = false;
 
@@ -73,6 +80,7 @@ public class Bomb : MonoBehaviour
         if( flag )
         {
             //游戏结束
+            GameManager.player.gameObject.SetActive(false);
             Debug.Log("火车被爆炸波及，游戏结束！");
         }
 

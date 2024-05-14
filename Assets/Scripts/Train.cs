@@ -53,18 +53,18 @@ public class Train : MonoBehaviour
 
     public bool Move()
     {
-        if(position == GameManager.start)
-        {
-            Rail start_rail = GameManager.railArray[position.x, position.y];
-            if (start_rail.GetLinkDirection1() == Vector2Int.left)
-            {
-                SetForwardDirection(start_rail.GetLinkDirection2());
-            }
-            else
-            {
-                SetForwardDirection(start_rail.GetLinkDirection1());
-            }
-        }
+        //if(position == GameManager.start)
+        //{
+        //    Rail start_rail = GameManager.railArray[position.x, position.y];
+        //    if (start_rail.GetLinkDirection1() == Vector2Int.left)
+        //    {
+        //        SetForwardDirection(start_rail.GetLinkDirection2());
+        //    }
+        //    else
+        //    {
+        //        SetForwardDirection(start_rail.GetLinkDirection1());
+        //    }
+        //}
 
         if (!GameManager.MapBoundTest(position + forwardDirection))
         {
