@@ -7,6 +7,23 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     public static int level = 1;
+    public static AudioSource audioSource;
+
+    void Awake()
+    {
+        if (audioSource == null)
+        {
+            GameObject audioObject = new GameObject("AudioPlayer");
+            audioObject.AddComponent<AudioSource>();
+            audioSource = audioObject.GetComponent<AudioSource>();
+            DontDestroyOnLoad(audioObject);
+        }
+        else
+        {
+            
+        }
+    }
+
     public void ChangeStateToSetRail()
     {
         //Debug.Log("∑≈÷√Ã˙πÏ£°");
@@ -62,25 +79,34 @@ public class UIController : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("GameIntroduction");
+        audioSource.clip = Resources.Load<AudioClip>("Audios/Click");
+        audioSource.Play();
     }
 
     public void SelectGame()
     {
         SceneManager.LoadScene("SelectScene");
+        audioSource.clip = Resources.Load<AudioClip>("Audios/Click");
+        audioSource.Play();
     }
 
     public void Config()
     {
-
+        audioSource.clip = Resources.Load<AudioClip>("Audios/Click");
+        audioSource.Play();
     }
 
     public void ExitGame()
     {
+        audioSource.clip = Resources.Load<AudioClip>("Audios/Click");
+        audioSource.Play();
         Application.Quit();
     }
 
     public void RunGame()
     {
+        audioSource.clip = Resources.Load<AudioClip>("Audios/Click");
+        audioSource.Play();
         string s = "Game" + level;
         GameObject.Find("LoadMask").GetComponent<Animator>().Play("loadscene");
         //SceneManager.LoadScene(s);
@@ -88,13 +114,17 @@ public class UIController : MonoBehaviour
 
     public void GoBack()
     {
+        audioSource.clip = Resources.Load<AudioClip>("Audios/Click");
+        audioSource.Play();
         SceneManager.LoadScene("MainMenu");
-        GameManager.audioSource.clip = Resources.Load<AudioClip>("Audios/Click");
-        GameManager.audioSource.Play();
+        audioSource.clip = Resources.Load<AudioClip>("Audios/Click");
+        audioSource.Play();
     }
 
     public void PlusLevel()
     {
+        audioSource.clip = Resources.Load<AudioClip>("Audios/Click");
+        audioSource.Play();
         string s = GameObject.Find("LevelText").GetComponent<Text>().text;
         int cur_level = int.Parse(s) + 1;
         level = cur_level;
@@ -124,6 +154,8 @@ public class UIController : MonoBehaviour
 
     public void MinusLevel()
     {
+        audioSource.clip = Resources.Load<AudioClip>("Audios/Click");
+        audioSource.Play();
         string s = GameObject.Find("LevelText").GetComponent<Text>().text;
         int cur_level = int.Parse(s) - 1;
         level = cur_level;

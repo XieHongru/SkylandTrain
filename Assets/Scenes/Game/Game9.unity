@@ -341,7 +341,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1265213439}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: GoBack
         m_Mode: 1
@@ -1260,6 +1260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   train: {fileID: 8309274045461091105, guid: a666050c4c0255c4bbc31c81a4777bc0, type: 3}
+  explosion: {fileID: 0}
   slime: 0
   startStation: {x: 0, y: 3}
   endStation: {x: 7, y: 4}

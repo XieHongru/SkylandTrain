@@ -6,7 +6,6 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 using static Unity.VisualScripting.Member;
-using static UnityEditor.PlayerSettings;
 using static UnityEngine.GraphicsBuffer;
 
 public class Train : MonoBehaviour

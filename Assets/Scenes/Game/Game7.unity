@@ -346,7 +346,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1265213439}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: GoBack
         m_Mode: 1
@@ -814,7 +814,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1740213787
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 7713ec870b55e124ea65b2931436c3a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.3882353}
@@ -1199,6 +1199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   train: {fileID: 8309274045461091105, guid: a666050c4c0255c4bbc31c81a4777bc0, type: 3}
+  explosion: {fileID: 0}
   slime: 0
   startStation: {x: 0, y: 7}
   endStation: {x: 7, y: 0}
@@ -2245,7 +2246,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1740213787
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -4066,7 +4067,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1740213787
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0eaa97175bc9b9944a5b9d882e58448c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.3882353}
